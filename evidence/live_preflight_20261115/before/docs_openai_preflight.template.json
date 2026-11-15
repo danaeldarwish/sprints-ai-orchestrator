@@ -1,0 +1,13 @@
+{
+  "status": "PENDING_OPERATOR_CHECK_NO_API_REQUESTS",
+  "model": "gpt-6-luna",
+  "checked_at_utc": null,
+  "model_access_confirmed": false,
+  "project_authorized": false,
+  "billing_and_quota_confirmed": false,
+  "standard_global_pricing_confirmed": false,
+  "input_per_million": 0.1,
+  "cache_write_per_million": 0.125,
+  "output_per_million": 0.5,
+  "note": "Copy to a new private local file; complete only after checking intended project settings. No credentials here."
+}

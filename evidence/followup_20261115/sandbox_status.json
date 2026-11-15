@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.venv-audit/Scripts/python.exe",
+    "-m",
+    "src.main",
+    "sandbox-status"
+  ],
+  "at": "2026-11-15T05:19:18.717Z",
+  "duration_ms": 8310,
+  "exit_code": 0,
+  "killed": false
+}

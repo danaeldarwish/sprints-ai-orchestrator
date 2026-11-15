@@ -1,0 +1,18 @@
+{
+  "scope": "All payload bytes, recursively expanded ZIP/PPTX/XLSX members; PDF extracted text/metadata and read-only SQLite text inspected separately",
+  "patterns": [
+    "provider_key",
+    "github_token",
+    "private_key",
+    "aws_access_id",
+    "credential_url"
+  ],
+  "findings": [],
+  "files": 912,
+  "nested_archives": 7,
+  "expanded_bytes": 12058484,
+  "limitations": [
+    "Pattern scan is not a guarantee of absence of all secrets",
+    "Supplied learner names, progress and salary preferences are intentionally included; keep private and obtain publication authorization"
+  ]
+}

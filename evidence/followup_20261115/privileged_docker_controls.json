@@ -1,0 +1,15 @@
+{
+  "command": [
+    "E:\\Development\\Docker\\App\\resources\\bin\\docker.EXE",
+    "--config",
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\followup_20261115\\docker-config",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "info",
+    "--format",
+    "{{json .OSType}} {{json .MemoryLimit}} {{json .SwapLimit}} {{json .PidsLimit}} {{json .CPUCfsQuota}} {{json .SecurityOptions}}"
+  ],
+  "at": "2026-11-15T05:20:07.591305+00:00",
+  "exit_code": 0,
+  "duration_s": 0.491
+}

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.venv-audit/Scripts/python.exe",
+    "scripts/build_followup_report.py"
+  ],
+  "at": "2026-11-15T06:19:39.082Z",
+  "duration_ms": 1291,
+  "exit_code": 0,
+  "killed": false
+}

@@ -1,0 +1,34 @@
+
+ProcessName           Id
+-----------           --
+com.docker.backend 34536
+com.docker.backend 50632
+com.docker.build   43232
+docker             45220
+Docker Desktop      4348
+Docker Desktop     42076
+Docker Desktop     46008
+Docker Desktop     51164
+Docker Desktop     54232
+docker-agent       53800
+wsl                23160
+wsl                25252
+wsl                35868
+wsl                37152
+wsl                43088
+wsl                44552
+wsl                53404
+wsl                53888
+wslhost            12716
+wslhost            14748
+wslhost            52280
+wslhost            52504
+wslhost            53000
+wslhost            53212
+wslhost            53972
+wslhost            54172
+wslrelay           52560
+wslservice          3352
+                        
+
+

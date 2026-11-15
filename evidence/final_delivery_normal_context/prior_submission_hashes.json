@@ -1,0 +1,52 @@
+[
+  {
+    "path": "submission/audit_manifest.json",
+    "bytes": 21660,
+    "sha256": "34db3ab2d980db98996b3332cc107febe9e2a6fa7a6080c7a720ca8adfbb388c"
+  },
+  {
+    "path": "submission/sprints-ai-orchestrator-final.zip",
+    "bytes": 3494002,
+    "sha256": "b7bf8908db005675b4fa344b03f3037b8d8fc82586edaf1401e6ab6d3603c234"
+  },
+  {
+    "path": "submission/sprints-ai-orchestrator-final.zip.sha256",
+    "bytes": 101,
+    "sha256": "0e02325d55c65f656280c50b4641a9c2f8582c93723149fb3b36aea512a87199"
+  },
+  {
+    "path": "submission/sprints-ai-orchestrator-HANDOFF-20261115T070953Z.zip",
+    "bytes": 7188155,
+    "sha256": "7d0fc6009a8729007c91bd657029a347889a32856221831bc294ee2f0e397034"
+  },
+  {
+    "path": "submission/stakeholder_presentation.pdf",
+    "bytes": 964942,
+    "sha256": "ff760827b79dd6977193ecb1ca02acb825ae40b6ca820f453870e8d40daf7a4e"
+  },
+  {
+    "path": "submission/stakeholder_presentation.pptx",
+    "bytes": 53568,
+    "sha256": "80b36167e23de940a1d6dbe2875bba48a6a235546d42db67d8aa0a5f09eb88b0"
+  },
+  {
+    "path": "submission/stakeholder_presentation_current.pdf",
+    "bytes": 430620,
+    "sha256": "f582b52a7657657179b4aad8f29d2ece208485f8679dc531e46c5f0603301118"
+  },
+  {
+    "path": "submission/stakeholder_presentation_current.pptx",
+    "bytes": 54645,
+    "sha256": "c150a84859eade5f722d6bf2f6f5e028ca5a578f7213f8a67abde1530528023e"
+  },
+  {
+    "path": "submission/technical_report.pdf",
+    "bytes": 32952,
+    "sha256": "d218295f5abac59be12d0b3c4fe3b0c66872f7705d790283ab4264363ca284b7"
+  },
+  {
+    "path": "submission/technical_report_current.pdf",
+    "bytes": 34356,
+    "sha256": "5e15035b09f26132d93ea1ce375982ccd818be327910938606fcf79c3c0d1319"
+  }
+]

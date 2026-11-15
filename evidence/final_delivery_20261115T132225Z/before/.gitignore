@@ -1,0 +1,11 @@
+.chroma/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+
+.venv*/
+.build/
+submission/*_extract/
+.env.*
+!.env.example

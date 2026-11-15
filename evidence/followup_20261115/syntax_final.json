@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.venv-audit/Scripts/python.exe",
+    "-c",
+    "import ast,pathlib; root=pathlib.Path.cwd(); files=sorted(p for folder in ('src','tests','scripts') for p in (root/folder).rglob('*.py')); [ast.parse(p.read_text(encoding='utf-8-sig'),filename=str(p)) for p in files]; print(f'Parsed {len(files)} current Python files; no application or provider execution.')"
+  ],
+  "at": "2026-11-15T06:20:44.930Z",
+  "duration_ms": 1424,
+  "exit_code": 0,
+  "killed": false
+}

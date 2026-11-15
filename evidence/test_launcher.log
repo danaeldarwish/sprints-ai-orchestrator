@@ -1,0 +1,9 @@
+{"command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "-m", "pytest", "--junitxml=evidence/tests_initial.xml", "-rs"], "cwd": ".", "at": "2026-11-15T04:41:28.123140+00:00", "exit_code": 0, "timed_out": false, "duration_s": 24.074}
+...................................................................sssss [ 67%]
+ssssss.............................                                      [100%]
+=========================== short test summary info ===========================
+SKIPPED [6] tests\test_sandbox.py:71: Actual Linux sandbox unavailable: Local Linux Docker daemon unavailable
+SKIPPED [5] tests\test_sandbox.py:83: Actual Linux sandbox unavailable: Local Linux Docker daemon unavailable
+96 passed, 11 skipped in 11.93s
+
+

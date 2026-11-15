@@ -1,0 +1,16 @@
+{
+  "command": [
+    "E:/Development/Docker/App/resources/bin/docker.exe",
+    "--config",
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\followup_20261115\\docker-config",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "image",
+    "inspect",
+    "sprints-grading-sandbox:verified",
+    "--format",
+    "{\"id\":{{json .Id}},\"os\":{{json .Os}},\"arch\":{{json .Architecture}},\"user\":{{json .Config.User}},\"entrypoint\":{{json .Config.Entrypoint}},\"volumes\":{{json (index .Config \"Volumes\")}}}"
+  ],
+  "exit_code": 0,
+  "duration_s": 1.349
+}

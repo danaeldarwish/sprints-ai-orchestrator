@@ -1,0 +1,9 @@
+{
+  "notebook": "notebooks\\evaluator_optimizer_verified.ipynb",
+  "all_executed": true,
+  "code_cells": 4,
+  "errors": 0,
+  "learner_execution": "actual restricted Linux Docker",
+  "reasoning": "offline deterministic; faulty grader injection explicitly labeled",
+  "image": "sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d"
+}

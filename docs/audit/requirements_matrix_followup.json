@@ -1,0 +1,444 @@
+{
+  "source_basis": "User working assignment/discovery/rubric transcriptions, not original media",
+  "functional": [
+    {
+      "id": "F1",
+      "requirement": "500-token Chroma ingestion, 50-token overlap",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/tools/rag_retriever.py:125",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_rag.py; tests/test_security_regressions.py::test_exact_overlap_offsets_and_reencoded_token_sequences; evidence/benchmark/rag_latency.json",
+      "limits": "Actual Chroma, exact cl100k_base; embeddings are deterministic hashing.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "F2",
+      "requirement": "Pydantic score, feedback_points, pass_status",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/schemas.py:13",
+      "execution_evidence": "evidence/followup_20261115/evaluation/scenarios.json; evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_schemas_and_prompts.py; evidence/tests.xml",
+      "limits": "Real container-backed Pydantic feedback in the executed notebook; live model grading pending.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "F3",
+      "requirement": "SQL learner progress, EGP target, employers",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/tools/db_queries.py:100",
+      "execution_evidence": "evidence/followup_20261115/evaluation/scenarios.json; evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_sql_tool.py; evidence/evaluation/scenarios.json",
+      "limits": "Actual SQLite rows; partner openings synthetic.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "F4",
+      "requirement": "Secure isolated Python execution",
+      "baseline": "FAIL",
+      "final": "PASS",
+      "code": "src/tools/code_repl.py:144",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; evidence/followup_20261115/verified_pid/sandbox_controls.json",
+      "limits": "Actual Linux controls/kernel evidence; see original 14 plus two new real tests. Shared-kernel and same-interpreter verdict-integrity risks remain.",
+      "previous_audit_status": "PARTIAL"
+    },
+    {
+      "id": "F5",
+      "requirement": "Unified TypedDict StateGraph, Advisor/Assessor routing",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/agents/orchestrator.py:109",
+      "execution_evidence": "evidence/followup_20261115/evaluation/scenarios.json; evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_graph.py::test_routes_curriculum_career_grading; evidence/evaluation/scenarios.json",
+      "limits": "Real LangGraph execution with offline reasoning.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "F6",
+      "requirement": "MemorySaver and learner checkpoint isolation",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/service.py:38",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_graph.py::test_memory_and_public_snapshot_are_owned; tests/test_security_regressions.py",
+      "limits": "Mock authenticated application context only; process-local persistence.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "F7",
+      "requirement": "Agentic RAG critique, reformulation and retry",
+      "baseline": "PARTIAL",
+      "final": "PARTIAL",
+      "code": "src/agents/advisor_agent.py:56",
+      "execution_evidence": "evidence/followup_20261115/evaluation/scenarios.json; evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_graph.py::test_rag_reflects_and_reformulates; evidence/evaluation/scenarios.json",
+      "limits": "Real retrieval and bounded reflection/reformulation; critique remains heuristic until approved live inference.",
+      "previous_audit_status": "PARTIAL"
+    },
+    {
+      "id": "F8",
+      "requirement": "Assessor evaluator-optimizer with LLM-as-Judge",
+      "baseline": "PARTIAL",
+      "final": "PARTIAL",
+      "code": "src/agents/assessor_agent.py:59",
+      "execution_evidence": "evidence/followup_20261115/notebook_execution.json; evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_evaluator_optimizer.py; notebooks/evaluator_optimizer_loop.ipynb",
+      "limits": "New actual-container notebook executed; optimizer grader fault injection labeled. Genuine LLM judge pending.",
+      "previous_audit_status": "PARTIAL"
+    },
+    {
+      "id": "F9",
+      "requirement": "Tier-1 LangGraph interrupt and explicit authorized review",
+      "baseline": "FAIL",
+      "final": "PASS",
+      "code": "src/service.py:113",
+      "execution_evidence": "evidence/followup_20261115/evaluation/scenarios.json; evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_graph.py; tests/test_security_regressions.py; evidence/evaluation/scenarios.json",
+      "limits": "Pending/approved/rejected transitions use mock reviewer sessions. Production identity and a real human recording remain unverified.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "F10",
+      "requirement": "HumanMessage, AIMessage, ToolMessage and trace logs",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/protocol.py:20",
+      "execution_evidence": "evidence/followup_20261115/evaluation/scenarios.json; evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_graph.py::test_protocol_pairs_and_metadata_trace; evidence/commands/default_demo.stdout.txt",
+      "limits": "Metadata-only trace excludes records and tokens.",
+      "previous_audit_status": "PASS"
+    }
+  ],
+  "acceptance": [
+    {
+      "id": "A1",
+      "requirement": "Use LangGraph orchestration",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/agents/orchestrator.py:3",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; evidence/tests.xml; evidence/evaluation/scenarios.json",
+      "limits": "",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "A2",
+      "requirement": "Detailed Sprints-specific docstrings",
+      "baseline": "PASS",
+      "final": "PASS",
+      "code": "src/agents; src/tools; src/state.py; src/service.py",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; Source inspection; evidence/commands/syntax.json",
+      "limits": "Editorial review, not a claim that a style tool proved documentation quality.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "A3",
+      "requirement": "Chroma retrieval below 1000 ms",
+      "baseline": "NOT VERIFIED",
+      "final": "PARTIAL",
+      "code": "src/tools/rag_retriever.py:221",
+      "execution_evidence": "evidence/followup_20261115/rag_latency.json; evidence/followup_20261115/benchmark_source_addendum.json",
+      "limits": "Cold n=20 p95=1591.568 ms, 85% under 1000. Prepared first n=20 p95=13.129 ms. Warm n=200 p95=16.128 ms. Startup cost retained.",
+      "previous_audit_status": "PARTIAL"
+    },
+    {
+      "id": "A4",
+      "requirement": "SQL/Python failures return structured Unable to verify",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/schemas.py:UnableToVerify; src/agents/assessor_agent.py:assessor_run",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_sql_tool.py; tests/test_graph.py; evidence/evaluation/scenarios.json",
+      "limits": "",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "A5",
+      "requirement": "At most three optimizer refinements",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/agents/assessor_agent.py:104",
+      "execution_evidence": "evidence/followup_20261115/notebook_execution.json; evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_evaluator_optimizer.py::test_hard_maximum_three_refinements; executed notebook",
+      "limits": "Three refinements/four drafts maximum; actual execution and labeled grader fault injection tested separately.",
+      "previous_audit_status": "PASS"
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "D1",
+      "requirement": "Reproducible GitHub-ready repository",
+      "baseline": "PARTIAL",
+      "final": "PARTIAL",
+      "code": "README.md; requirements.txt; requirements-lock.txt",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; evidence/commands/dependency_check.json; evidence/archive_verification.json",
+      "limits": "Local source/lock/image recipe exists; no Git metadata or shareable repository/workspace URL.",
+      "previous_audit_status": "PARTIAL"
+    },
+    {
+      "id": "D2",
+      "requirement": "Complete technical report PDF",
+      "baseline": "FAIL",
+      "final": "PARTIAL",
+      "code": "submission/technical_report.pdf",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; evidence/artifact_validation.json; evidence/render_review.md",
+      "limits": "16-page PDF preserved as earlier audit snapshot; current addendum here. Refresh after remaining gates.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "D3",
+      "requirement": "8-10 slide presentation in PPTX and PDF",
+      "baseline": "FAIL",
+      "final": "PARTIAL",
+      "code": "submission/stakeholder_presentation.pptx; submission/stakeholder_presentation.pdf",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; evidence/artifact_validation.json; evidence/presentation_validation.json; evidence/render_review.md",
+      "limits": "10-slide PPTX and PDF preserved as earlier snapshot; refresh after remaining gates.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "D4",
+      "requirement": "Genuine 3-5 minute recorded demo",
+      "baseline": "FAIL",
+      "final": "FAIL",
+      "code": "docs/demo_recording_script.md",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; No MP4 exists; duration NOT VERIFIED",
+      "limits": "VIDEO STATUS=PENDING. No genuine 180\u2013300 s recording/link; planned 4:30 script is not a video.",
+      "previous_audit_status": "FAIL"
+    },
+    {
+      "id": "D5",
+      "requirement": "Executed assessor evaluation notebook",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "notebooks/evaluator_optimizer_verified.ipynb (new); notebooks/evaluator_optimizer_loop.ipynb (preserved)",
+      "execution_evidence": "evidence/followup_20261115/notebook_execution.json; evidence/followup_20261115/verified_pid/full_tests.xml; evidence/commands/notebook_execute.json",
+      "limits": "Original notebook retained; new actual-container notebook executed with no errors.",
+      "previous_audit_status": "PARTIAL"
+    },
+    {
+      "id": "D6",
+      "requirement": "Final package and audit manifest",
+      "baseline": "FAIL",
+      "final": "PARTIAL",
+      "code": "submission/sprints-ai-orchestrator-final.zip; submission/audit_manifest.json",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; evidence/archive_verification.json",
+      "limits": "Existing final ZIP preserved unchanged. It excludes follow-up changes; not a current submission.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "D7",
+      "requirement": "Supplied learner data and documented SQLite",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "data/sprints_learner_db.csv; data/sprints_learner.db; docs/data_provenance.md",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; evidence/baseline/archive_manifest.json; evidence/quality_gate.json",
+      "limits": "25 learner records unchanged; 16 synthetic openings. No 500-record expansion.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "D8",
+      "requirement": "Shareable repository or workspace URL",
+      "baseline": "NOT VERIFIED",
+      "final": "PENDING",
+      "code": "Local workspace",
+      "execution_evidence": "No Git metadata or published URL found",
+      "limits": "No publication authorized; no URL invented."
+    }
+  ],
+  "source_and_discovery": [
+    {
+      "id": "K1",
+      "requirement": "Original kickoff PPTX content cross-check",
+      "baseline": "NOT VERIFIED",
+      "final": "NOT VERIFIED",
+      "code": "_client_sources/README.md",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; User clarified original PPTX absent",
+      "limits": "Working notes cannot prove full deck fidelity.",
+      "previous_audit_status": "NOT VERIFIED"
+    },
+    {
+      "id": "K2",
+      "requirement": "Kickoff mentions 500 learners",
+      "baseline": "NOT VERIFIED",
+      "final": "NOT VERIFIED",
+      "code": "_client_sources/README.md; docs/data_provenance.md",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; 25 CSV rows counted; original kickoff absent",
+      "limits": "500 remains an attributed independent finding, not independently verified media content.",
+      "previous_audit_status": "NOT VERIFIED"
+    },
+    {
+      "id": "K3",
+      "requirement": "Original discovery MP3 and full transcript cross-check",
+      "baseline": "NOT VERIFIED",
+      "final": "NOT VERIFIED",
+      "code": "_client_sources/client_discovery_call_transcript.md",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; User-supplied working summary only",
+      "limits": "Original MP3 and verbatim full transcript unavailable.",
+      "previous_audit_status": "NOT VERIFIED"
+    },
+    {
+      "id": "S1",
+      "requirement": "80% waiting-time reduction target, honest measurement",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "docs/business_metrics.md",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; No business event baseline; evaluation n=0",
+      "limits": "Target captured; achieved reduction NOT VERIFIED.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "S2",
+      "requirement": "Mandatory typed state and per-learner checkpoints",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/state.py; src/service.py",
+      "execution_evidence": "evidence/followup_20261115/evaluation/scenarios.json; evidence/followup_20261115/verified_pid/full_tests.xml; evidence/tests.xml",
+      "limits": "",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "S3",
+      "requirement": "Secure grading required by discovery",
+      "baseline": "FAIL",
+      "final": "PASS",
+      "code": "src/tools/code_repl.py",
+      "execution_evidence": "evidence/followup_20261115/verified_pid/full_tests.xml; evidence/followup_20261115/verified_pid/sandbox_controls.json",
+      "limits": "Actual scoped Linux tests/probes; static/mocked cases are separate evidence.",
+      "previous_audit_status": "PARTIAL"
+    },
+    {
+      "id": "S4",
+      "requirement": "Prevent invented qualifications and wrong matches",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/agents/advisor_agent.py:build_career_message; src/tools/db_queries.py:evaluate_openings",
+      "execution_evidence": "evidence/followup_20261115/evaluation/scenarios.json; evidence/followup_20261115/verified_pid/full_tests.xml; tests/test_graph.py::test_grounding_rejects_invented_partner_salary_opening; tests/test_sql_tool.py",
+      "limits": "Deterministic row-derived POC policy; real partner-policy validity unverified.",
+      "previous_audit_status": "PASS"
+    },
+    {
+      "id": "S5",
+      "requirement": "Live Q&A, isolated grading and DB matching demo",
+      "baseline": "PARTIAL",
+      "final": "PARTIAL",
+      "code": "src/main.py; docs/demo_recording_script.md",
+      "execution_evidence": "evidence/followup_20261115/evaluation/scenarios.json; evidence/followup_20261115/verified_pid/full_tests.xml; evidence/commands/default_demo.stdout.txt; evidence/evaluation/scenarios.json",
+      "limits": "Local graph/tools evaluated; paid inference, genuine recording and publication remain pending.",
+      "previous_audit_status": "PARTIAL"
+    }
+  ],
+  "independent_findings": [
+    [
+      "1",
+      "25 supplied records versus attributed kickoff 500",
+      "CONFIRMED 25; 500 NOT VERIFIED",
+      "CSV/hash check; original kickoff unavailable"
+    ],
+    [
+      "2",
+      "Locally generated SQLite, synthetic curriculum/openings",
+      "CONFIRMED",
+      "build_database seed rules; is_synthetic=1; synthetic Markdown labels"
+    ],
+    [
+      "3",
+      "Default heuristic/scripted models, no verified OpenAI run",
+      "CONFIRMED",
+      "src/config.py; src/llm.py; no live call made"
+    ],
+    [
+      "4",
+      "POSIX executor fails on Windows",
+      "CONFIRMED",
+      "baseline collection exit 4, ModuleNotFoundError: resource"
+    ],
+    [
+      "5",
+      "Noninteractive demo can auto-approve tier-1",
+      "CONFIRMED baseline; REMOVED",
+      "original src/main.py lambda default; new default leaves pending"
+    ],
+    [
+      "6",
+      "Unverified reviewer metadata/permissive resume",
+      "CONFIRMED baseline; FIXED in mock application scope",
+      "original hitl_gate accepts bool/default reviewer; strict service review now"
+    ],
+    [
+      "7",
+      "SQL tool lacks learner authorization",
+      "CONFIRMED baseline; FIXED at tool boundary",
+      "original run_readonly_sql accepts all SELECT; now disabled"
+    ],
+    [
+      "8",
+      "Learner-derived thread ID is not authentication",
+      "CONFIRMED baseline; FIXED in application scope",
+      "legacy thread_config disabled; sessions and opaque registry now"
+    ],
+    [
+      "9",
+      "Missing report/deck/video in baseline ZIP",
+      "CONFIRMED",
+      "original ZIP member manifest; report/deck now created; video still pending"
+    ],
+    [
+      "10",
+      "Saved textual demo is not a video",
+      "No baseline demo-text artifact independently found; no video found",
+      "Text and notebook outputs are not counted as a recording"
+    ],
+    [
+      "11",
+      "Latency claim lacks reproducible benchmark evidence",
+      "CONFIRMED baseline; NEW evidence added",
+      "old README claimed approx 1ms p95; old test warm only; raw cold/warm samples now"
+    ],
+    [
+      "12",
+      "80% waiting-time target",
+      "CONFIRMED by user working notes; original audio NOT VERIFIED",
+      "Original charter and new working notes; no achieved improvement claimed"
+    ]
+  ],
+  "rubric": [
+    {
+      "criterion": "Functional completeness",
+      "maximum": 35,
+      "risk": "Live LLM behavior and cold retrieval still partial; scoped Linux evidence now measured.",
+      "previous_estimate": 22,
+      "estimate": null
+    },
+    {
+      "criterion": "Quality and reproducibility",
+      "maximum": 20,
+      "risk": "Earlier timeout failures retained; production identity/durability and broad load validation unresolved.",
+      "previous_estimate": 15,
+      "estimate": null
+    },
+    {
+      "criterion": "Integration across both sprints",
+      "maximum": 15,
+      "risk": "Actual local integration; genuine LLM judge pending.",
+      "previous_estimate": 9,
+      "estimate": null
+    },
+    {
+      "criterion": "Technical report PDF",
+      "maximum": 10,
+      "risk": "PDF exists as historical snapshot; refresh final results.",
+      "previous_estimate": 9,
+      "estimate": null
+    },
+    {
+      "criterion": "Stakeholder presentation",
+      "maximum": 10,
+      "risk": "10 slides exist as historical snapshot; refresh final results.",
+      "previous_estimate": 9,
+      "estimate": null
+    },
+    {
+      "criterion": "Recorded demonstration",
+      "maximum": 10,
+      "risk": "No video; entire 10-point category at risk.",
+      "previous_estimate": 0,
+      "estimate": null
+    }
+  ],
+  "estimated_score": null,
+  "pass_score": 60,
+  "verdict": "NOT READY",
+  "previous_planning_estimate": 64,
+  "revision_at": "2026-11-15T06:20:21.254327+00:00",
+  "score_note": "Updated risk assessment, not an official score; earlier64/100 estimate is historical only."
+}

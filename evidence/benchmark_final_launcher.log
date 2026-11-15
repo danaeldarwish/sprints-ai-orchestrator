@@ -1,0 +1,50 @@
+{"command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "scripts/benchmark_rag.py"], "cwd": ".", "at": "2026-11-15T04:49:40.549867+00:00", "exit_code": 0, "timed_out": false, "duration_s": 104.71}
+{
+  "backend": "actual ChromaDB PersistentClient; deterministic hashing embeddings",
+  "method": "nearest-rank; process-cold, OS cache not flushed; warm includes executor dispatch and embedding",
+  "tokenizer": "tiktoken:cl100k_base",
+  "ingest": {
+    "documents": 6,
+    "chunks": 8,
+    "max_chunk_tokens": 500,
+    "chunk_tokens": 500,
+    "chunk_overlap": 50,
+    "tokenizer": "tiktoken:cl100k_base",
+    "seconds": 1.286
+  },
+  "corpus_sha256": {
+    "01_python_foundations_and_grading.md": "65c321ba430cb52dc8893a1129aff67ae5ab78657247e35eb350bac41574046a",
+    "02_langchain_prompts_parsers_and_tools.md": "a3b45e094f0e8a0e01b8a8682f4d9236834aa5b0dc947af0618d8bc7a5f60748",
+    "03_rag_with_chromadb.md": "83635d1a71f3ba5b7de31941cc1c54a9518618630f088cd0463e921330c0fa53",
+    "04_langgraph_orchestration.md": "47cfab8f92e30232b2050f7edd07cc89db2327e6b9400d83fce5d65f93b3277b",
+    "05_memory_human_in_the_loop_and_safety.md": "6f5f2425aa11b0aa7d916ae2e5780d9993594b6b2fe479f1e7bc67e69eeae9d4",
+    "06_career_services_policy.md": "110e8862b19eaee0d9898dd859751849e01ea83b7c3068bb0ebe1d8ccfa5b4e8"
+  },
+  "cold_process": {
+    "n": 10,
+    "p50_ms": 7719.424,
+    "p95_ms": 13342.484,
+    "p99_ms": 13342.484,
+    "max_ms": 13342.484,
+    "below_1000ms_pct": 0.0
+  },
+  "cold_first_retrieve": {
+    "n": 10,
+    "p50_ms": 583.462,
+    "p95_ms": 1202.391,
+    "p99_ms": 1202.391,
+    "max_ms": 1202.391,
+    "below_1000ms_pct": 90.0
+  },
+  "warm": {
+    "n": 200,
+    "p50_ms": 5.611,
+    "p95_ms": 13.026,
+    "p99_ms": 27.082,
+    "max_ms": 49.967,
+    "below_1000ms_pct": 100.0
+  }
+}
+Benchmark temporary index cleanup: complete
+
+

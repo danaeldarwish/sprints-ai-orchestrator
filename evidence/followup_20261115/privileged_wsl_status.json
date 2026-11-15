@@ -1,0 +1,9 @@
+{
+  "command": [
+    "wsl.exe",
+    "--status"
+  ],
+  "at": "2026-11-15T05:20:12.488707+00:00",
+  "exit_code": 0,
+  "duration_s": 1.492
+}

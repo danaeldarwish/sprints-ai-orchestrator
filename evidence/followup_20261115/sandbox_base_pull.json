@@ -1,0 +1,13 @@
+{
+  "command": [
+    "E:/Development/Docker/App/resources/bin/docker.exe",
+    "--config",
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\followup_20261115\\docker-config",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "pull",
+    "python:3.13-slim"
+  ],
+  "exit_code": 0,
+  "duration_s": 36.263
+}

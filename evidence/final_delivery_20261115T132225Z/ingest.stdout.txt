@@ -1,0 +1,9 @@
+{
+  "documents": 6,
+  "chunks": 8,
+  "max_chunk_tokens": 500,
+  "chunk_tokens": 500,
+  "chunk_overlap": 50,
+  "tokenizer": "tiktoken:cl100k_base",
+  "seconds": 1.352
+}

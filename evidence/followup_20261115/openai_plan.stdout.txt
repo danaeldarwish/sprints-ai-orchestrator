@@ -1,0 +1,42 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "model": "gpt-4o-mini-2024-07-18",
+  "max_requests": 24,
+  "input_admission_tokens_per_request": 4000,
+  "output_tokens_per_request": 500,
+  "timeout_s": 20,
+  "sdk_retries": 0,
+  "parser_attempts": 2,
+  "parser_attempts_consume_shared_budget": true,
+  "stop_on_any_provider_error": true,
+  "estimated_max_token_cost_usd": 0.0216,
+  "proposed_spend_ceiling_usd": 0.05,
+  "pricing_input_per_million": 0.15,
+  "pricing_output_per_million": 0.6,
+  "pricing_recheck_required_before_execution": true,
+  "credentials": "User provisions only SPRINTS_VERIFICATION_API_KEY after separate explicit approval. No dotenv, ambient OPENAI_API_KEY or unrelated projects.",
+  "embeddings": "Local hashing; no paid embeddings",
+  "cases": [
+    "Curriculum Q&A with actual Chroma sources",
+    "Buggy Python: actual Linux evidence + structured grade",
+    "Corrected Python: actual Linux evidence + bounded LLM judge/optimizer",
+    "Career matching from actual scoped SQLite rows",
+    "Fawry tier-1 remains pending LangGraph human review"
+  ],
+  "nominal_requests_without_repairs": 17,
+  "completion_not_guaranteed_within_cap": true,
+  "runtime_evidence": [
+    "UTC timestamps",
+    "model and SDK versions",
+    "case/result schema and status",
+    "retrieved source IDs",
+    "tool/protocol metadata",
+    "response/request IDs",
+    "token usage and finish reason",
+    "per-request latency",
+    "exception class and HTTP status",
+    "sandbox image ID",
+    "no keys, sessions, headers or raw private prompts"
+  ],
+  "actual_paid_requests": 0
+}

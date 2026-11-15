@@ -1,0 +1,156 @@
+{"command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "scripts/evaluate_scenarios.py"], "cwd": ".", "at": "2026-11-15T04:54:29.820004+00:00", "exit_code": 0, "timed_out": false, "duration_s": 14.387}
+ thread ID passed in the run configuration. The trusted application allocates an opaque thread ID for each authenticated mock learner. MemorySaver keeps data in process memory; production systems use a database-backed checkpointer such as SQLite or Postgres so state survives restarts.\n\nSources: 05_memory_human_in_the_loop_and_safety.md",
+        "turn_count": 1,
+        "assessment": {},
+        "refinement_count": 0,
+        "grader_calls": 0,
+        "needs_human_review": false,
+        "retrieval_attempts": 2,
+        "sources": [
+          "02_langchain_prompts_parsers_and_tools.md",
+          "04_langgraph_orchestration.md",
+          "05_memory_human_in_the_loop_and_safety.md"
+        ]
+      }
+    },
+    {
+      "scenario": "2_buggy_code",
+      "evidence": "real local graph and tools; heuristic reasoner",
+      "result": {
+        "status": "unable_to_verify",
+        "route": "assessor",
+        "final_answer": "Unable to verify: a verified isolated Python sandbox is unavailable (source: python_repl).",
+        "turn_count": 1,
+        "assessment": {},
+        "refinement_count": 0,
+        "grader_calls": 0,
+        "needs_human_review": false,
+        "retrieval_attempts": 0,
+        "fallback": {
+          "status": "unable_to_verify",
+          "source": "python_repl",
+          "message": "Unable to verify"
+        }
+      }
+    },
+    {
+      "scenario": "3_corrected_code",
+      "evidence": "real local graph and tools; heuristic reasoner",
+      "result": {
+        "status": "unable_to_verify",
+        "route": "assessor",
+        "final_answer": "Unable to verify: a verified isolated Python sandbox is unavailable (source: python_repl).",
+        "turn_count": 2,
+        "assessment": {},
+        "refinement_count": 0,
+        "grader_calls": 0,
+        "needs_human_review": false,
+        "retrieval_attempts": 0,
+        "fallback": {
+          "status": "unable_to_verify",
+          "source": "python_repl",
+          "message": "Unable to verify"
+        }
+      }
+    },
+    {
+      "scenario": "4_sqlite_matching",
+      "evidence": "real local graph and tools; heuristic reasoner",
+      "result": {
+        "status": "released",
+        "route": "advisor_career",
+        "final_answer": "Placement review for Karim Hassan (Frontend): 15 modules, Python score 88, target 15,000 EGP per month.\nEligible openings:\n- Swvl: Frontend Engineer (OPN-SWVL-F), salary band 9,900-18,000 EGP\nThese results come from your Sprints records. They are not a job offer.\nPartner openings are synthetic POC seed data.",
+        "turn_count": 1,
+        "assessment": {},
+        "refinement_count": 0,
+        "grader_calls": 0,
+        "needs_human_review": false,
+        "retrieval_attempts": 0
+      }
+    },
+    {
+      "scenario": "5_tier1_pending_approve_fixture",
+      "evidence": "real local graph and tools; heuristic reasoner",
+      "result": {
+        "status": "pending_human_review",
+        "route": "advisor_career",
+        "pending_id": "80c4c2c69a1eaeff132ef1a14971d438cc02d3140541cec8",
+        "final_answer": "Your placement recommendation is pending an authorized human review.",
+        "turn_count": 1
+      },
+      "transition_fixture": {
+        "status": "approved_by_human",
+        "route": "advisor_career",
+        "final_answer": "Placement review for Ali Mostafa (Advanced Agentic AI): 12 modules, Python score 98, target 40,000 EGP per month.\nEligible openings:\n- Fawry: Agentic AI Engineer (OPN-FAWR-AAA), salary band 25,000-48,000 EGP\n- Swvl: Agentic AI Engineer (OPN-SWVL-AAA), salary band 22,500-43,200 EGP\n- e& Egypt: Agentic AI Engineer (OPN-EEGY-AAA), salary band 25,000-48,000 EGP\nThese results come from your Sprints records. They are not a job offer.\nPartner openings are synthetic POC seed data.\n\nApproved by Sprints career advisor (mock-career-reviewer).",
+        "turn_count": 1,
+        "assessment": {},
+        "refinement_count": 0,
+        "grader_calls": 0,
+        "needs_human_review": false,
+        "retrieval_attempts": 0
+      },
+      "replay": "denied"
+    },
+    {
+      "scenario": "5_tier1_pending_reject_fixture",
+      "evidence": "real local graph and tools; heuristic reasoner",
+      "result": {
+        "status": "pending_human_review",
+        "route": "advisor_career",
+        "pending_id": "700536f530d4324dd52872bc10961f6b5b3cbb7b8b3f41c8",
+        "final_answer": "Your placement recommendation is pending an authorized human review.",
+        "turn_count": 1
+      },
+      "transition_fixture": {
+        "status": "rejected_by_human",
+        "route": "advisor_career",
+        "final_answer": "Your placement recommendation is on hold. A Sprints career advisor will contact you with next steps.",
+        "turn_count": 1,
+        "assessment": {},
+        "refinement_count": 0,
+        "grader_calls": 0,
+        "needs_human_review": false,
+        "retrieval_attempts": 0
+      },
+      "replay": "denied"
+    },
+    {
+      "scenario": "6_learner_isolation",
+      "result": {
+        "direct_other_profile": "unable_to_verify",
+        "checkpoint_injection": "denied"
+      },
+      "own_turn_count": 1
+    }
+  ],
+  "review_audit": [
+    {
+      "at": "2026-11-15T04:54:28.738181+00:00",
+      "action": "pending",
+      "pending_id": "80c4c2c69a1eaeff132ef1a14971d438cc02d3140541cec8",
+      "actor_role": "learner"
+    },
+    {
+      "at": "2026-11-15T04:54:28.755531+00:00",
+      "action": "approved",
+      "pending_id": "80c4c2c69a1eaeff132ef1a14971d438cc02d3140541cec8",
+      "actor_role": "reviewer"
+    },
+    {
+      "at": "2026-11-15T04:54:28.820396+00:00",
+      "action": "pending",
+      "pending_id": "700536f530d4324dd52872bc10961f6b5b3cbb7b8b3f41c8",
+      "actor_role": "learner"
+    },
+    {
+      "at": "2026-11-15T04:54:28.832529+00:00",
+      "action": "rejected",
+      "pending_id": "700536f530d4324dd52872bc10961f6b5b3cbb7b8b3f41c8",
+      "actor_role": "reviewer"
+    }
+  ]
+}
+Evaluation temporary database/index cleanup: complete
+
+DB tool failure: Access to another learner is forbidden
+

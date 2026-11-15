@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.venv-audit/Scripts/python.exe",
+    "scripts/quality_gate_followup.py"
+  ],
+  "at": "2026-11-15T06:19:48.159Z",
+  "duration_ms": 2867,
+  "exit_code": 0,
+  "killed": false
+}

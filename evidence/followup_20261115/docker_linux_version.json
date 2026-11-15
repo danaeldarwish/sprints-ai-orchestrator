@@ -1,0 +1,16 @@
+{
+  "command": [
+    "E:/Development/Docker/App/resources/bin/docker.exe",
+    "--config",
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/evidence/followup_20261115/docker-config",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "version",
+    "--format",
+    "{{json .}}"
+  ],
+  "at": "2026-11-15T05:19:11.686Z",
+  "duration_ms": 1387,
+  "exit_code": 1,
+  "killed": false
+}

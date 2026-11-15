@@ -1,0 +1,63 @@
+{"name": "archive_import", "command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "-c", "from pathlib import Path; import src; import src.agents.orchestrator; print(Path(src.__file__).resolve()); assert Path(src.__file__).resolve().is_relative_to(Path.cwd())"], "exit_code": 0, "duration_s": 5.632}
+C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.build\archive-a0e2771387a6468d9e98bcdd225b3858\sprints-ai-orchestrator\src\__init__.py
+
+
+{"name": "archive_tests", "command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "-m", "pytest", "--junitxml=C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\archive_tests.xml", "-rs"], "exit_code": 0, "duration_s": 21.72}
+...................................................................sssss [ 60%]
+sssssssss......................................                          [100%]
+=========================== short test summary info ===========================
+SKIPPED [6] tests\test_sandbox.py:74: Actual Linux sandbox unavailable: Local Linux Docker daemon unavailable
+SKIPPED [8] tests\test_sandbox.py:86: Actual Linux sandbox unavailable: Local Linux Docker daemon unavailable
+105 passed, 14 skipped in 11.40s
+
+
+{"name": "archive_demo", "command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "-m", "src.main", "demo", "--verbose"], "exit_code": 0, "duration_s": 10.364}
+P\nThese results come from your Sprints records. They are not a job offer.\nPartner openings are synthetic POC seed data.",
+  "turn_count": 1,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 0
+}
+
+SCENARIO tier1_pending
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_career
+sprints.trace    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+sprints.trace    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+sprints.trace    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage: content omitted from metadata trace
+sprints.trace ▶ node=career_recommend
+sprints.trace    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=hitl_gate
+{
+  "status": "pending_human_review",
+  "route": "advisor_career",
+  "pending_id": "9946cc2c9d9a7b4c0915c761b60a275bae15f8587733b181",
+  "final_answer": "Your placement recommendation is pending an authorized human review.",
+  "turn_count": 1
+}
+
+SCENARIO other_learner_denied
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "denied",
+  "route": "deny",
+  "final_answer": "I can only access your own Sprints record (SPR-1003). I can't share information about other learners.",
+  "turn_count": 2,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 0
+}
+
+
+{"archive": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\submission\\sprints-ai-orchestrator-final.zip", "sha256": "b7bf8908db005675b4fa344b03f3037b8d8fc82586edaf1401e6ab6d3603c234", "files": 189, "verdict": "NOT READY"}

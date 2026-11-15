@@ -1,0 +1,23 @@
+Sending build context to Docker daemon  2.048kB
+
+Step 1/6 : ARG PYTHON_BASE
+Step 2/6 : FROM ${PYTHON_BASE}
+ ---> e48f59cdba69
+Step 3/6 : ENV PYTHONDONTWRITEBYTECODE=1 PYTHONIOENCODING=utf-8
+ ---> Running in 02ad47793e5e
+ ---> Removed intermediate container 02ad47793e5e
+ ---> 7c1cb16e0327
+Step 4/6 : USER 65534:65534
+ ---> Running in 8a40236bc14d
+ ---> Removed intermediate container 8a40236bc14d
+ ---> ef435407361a
+Step 5/6 : WORKDIR /tmp
+ ---> Running in 195bf48ffc0e
+ ---> Removed intermediate container 195bf48ffc0e
+ ---> 6d95e22368c0
+Step 6/6 : ENTRYPOINT ["python"]
+ ---> Running in 21600562f49e
+ ---> Removed intermediate container 21600562f49e
+ ---> fc0ef3811e9d
+Successfully built fc0ef3811e9d
+Successfully tagged sprints-grading-sandbox:verified

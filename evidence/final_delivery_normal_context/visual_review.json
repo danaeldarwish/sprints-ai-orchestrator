@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-15T13:50:29.729Z",
+  "source": "Preserved current PDF/PPTX hashes and matching report/slide PNG render hashes in demonstration_manifest.json",
+  "inspected": "All 16 report pages and 10 slides via contact sheets; complete extracted text examined",
+  "finding": "Technical claims match preserved evidence; no visible clipping/overlap on overview renders",
+  "artifacts_changed": false,
+  "packaging_metadata": "Superseded by FINAL_DELIVERY_NOTE.md"
+}

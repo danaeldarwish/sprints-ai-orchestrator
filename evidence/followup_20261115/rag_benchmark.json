@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.venv-audit/Scripts/python.exe",
+    "scripts/benchmark_readiness.py"
+  ],
+  "at": "2026-11-15T05:39:36.255Z",
+  "duration_ms": 432177,
+  "exit_code": 0,
+  "killed": false
+}

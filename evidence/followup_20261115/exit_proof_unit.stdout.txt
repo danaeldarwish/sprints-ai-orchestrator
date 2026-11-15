@@ -1,0 +1,33 @@
+..............................F                                          [100%]
+================================== FAILURES ===================================
+_ test_delayed_attach_requires_authoritative_in_budget_exit[None-None-timeout] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002ADE0CCD6A0>
+started = None, finished = None, status = 'timeout'
+
+    @pytest.mark.parametrize('started,finished,status',[
+    ('2026-11-15T00:00:00Z','2026-11-15T00:00:01Z','ok'),
+    ('2026-11-15T00:00:00Z','2026-11-15T00:00:10Z','timeout'),
+    ('2026-11-15T00:00:01Z','2026-11-15T00:00:00Z','timeout'),
+    (None,None,'timeout')])
+    def test_delayed_attach_requires_authoritative_in_budget_exit(monkeypatch,started,finished,status):
+        proc=FakeProcess();proc.returncode=None
+        monkeypatch.setattr(m,'sandbox_capabilities',lambda:{'available':True,'image':'sha256:'+'a'*64})
+        monkeypatch.setattr(m,'_docker_prefix',lambda cfg:['local-fixture'])
+        monkeypatch.setattr(m.subprocess,'Popen',lambda *a,**k:proc)
+        clock=iter([0,10]);monkeypatch.setattr(m.time,'monotonic',lambda:next(clock))
+        def control(prefix,args,timeout=8):
+            if args[0]=='kill':proc.returncode=137
+            state={'Status':'exited','Running':False,'ExitCode':0,'OOMKilled':False,'StartedAt':started,'FinishedAt':finished}
+            return SimpleNamespace(returncode=0,stdout=json.dumps(state) if args[0]=='inspect' else '')
+        monkeypatch.setattr(m,'_control',control)
+        result=m._execute_container('{}',5)
+>       assert result.status==status
+E       AssertionError: assert 'unable_to_verify' == 'timeout'
+E         
+E         - timeout
+E         + unable_to_verify
+
+tests\test_sandbox.py:185: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_sandbox.py::test_delayed_attach_requires_authoritative_in_budget_exit[None-None-timeout]

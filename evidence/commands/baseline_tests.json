@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "--collect-only",
+    "-q"
+  ],
+  "exit_code": 4,
+  "note": "Collection only: original unsafe sandbox never executed"
+}

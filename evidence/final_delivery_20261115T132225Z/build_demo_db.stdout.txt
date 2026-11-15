@@ -1,0 +1,5 @@
+{
+  "learners": 25,
+  "openings": 16,
+  "db": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.build\\validation-runtime-20261115T134906Z\\learners.db"
+}

@@ -1,0 +1,75 @@
+{
+  "full_suite": {
+    "total": 157,
+    "passed": 157,
+    "failed": 0,
+    "skipped": 0
+  },
+  "focused_suite": {
+    "total": 70,
+    "passed": 70,
+    "failed": 0,
+    "skipped": 0
+  },
+  "focused_exit_code": 0,
+  "readiness": {
+    "status": "READY",
+    "accepting_learner_requests": true,
+    "startup_ms": 3042.505,
+    "message": "Curriculum collection and preparation query succeeded.",
+    "error_type": null
+  },
+  "historical_evidence_hash_mismatches": [],
+  "preserved_files": {
+    "data/sprints_learner_db.csv": true,
+    "data/sprints_learner.db": true,
+    "notebooks/evaluator_optimizer_verified.ipynb": true,
+    "submission/technical_report.pdf": true,
+    "submission/stakeholder_presentation.pptx": true,
+    "submission/stakeholder_presentation.pdf": true,
+    "submission/sprints-ai-orchestrator-final.zip": true
+  },
+  "required_local_files": {
+    "README.md": true,
+    "requirements.txt": true,
+    "requirements-lock.txt": true,
+    "notebooks/evaluator_optimizer_verified.ipynb": true,
+    "data/sprints_learner_db.csv": true,
+    "data/sprints_learner.db": true,
+    "docs/data_provenance.md": true,
+    "submission/technical_report_current.pdf": true,
+    "submission/stakeholder_presentation_current.pptx": true,
+    "submission/stakeholder_presentation_current.pdf": true,
+    "docs/demo_recording_script.md": true,
+    "docs/live_verification_plan.md": true,
+    "docs/openai_preflight.template.json": true,
+    "docs/rag_readiness.md": true,
+    "docs/audit/demo_readiness.md": true
+  },
+  "report_pages": 16,
+  "slide_pdf_pages": 10,
+  "pptx_slides": 10,
+  "native_chart_present": true,
+  "chart_workbook_present": true,
+  "native_table_present": true,
+  "notebook": {
+    "executed_cells": 4,
+    "errors": 0
+  },
+  "preserved_zip_entries": 190,
+  "preserved_zip_forbidden_entries": [],
+  "preserved_zip_current_source_complete": false,
+  "parsed_python_files": 65,
+  "broken_links": [],
+  "potential_secret_patterns": [],
+  "git_metadata_present": false,
+  "shareable_source_url": null,
+  "video_files": [],
+  "video_status": "PENDING",
+  "openai_requests": 0,
+  "full_security_suite_repeated": false,
+  "docker_rebuilt": false,
+  "dependencies_reinstalled": false,
+  "verdict": "NOT READY",
+  "local_checks_pass": true
+}

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.venv-audit/Scripts/python.exe",
+    "scripts/profile_rag_startup.py"
+  ],
+  "at": "2026-11-15T05:23:03.126Z",
+  "duration_ms": 56467,
+  "exit_code": 0,
+  "killed": false
+}

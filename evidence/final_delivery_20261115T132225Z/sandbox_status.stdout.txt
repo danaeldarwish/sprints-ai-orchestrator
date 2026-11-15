@@ -1,0 +1,6 @@
+{
+  "available": false,
+  "backend": "linux-docker",
+  "status": "unable_to_verify",
+  "reason": "Local Linux Docker daemon unavailable"
+}

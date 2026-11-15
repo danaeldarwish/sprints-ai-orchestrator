@@ -1,0 +1,29 @@
+{"command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "scripts/execute_notebook.py"], "cwd": ".", "at": "2026-11-15T04:43:38.789547+00:00", "exit_code": 1, "timed_out": false, "duration_s": 7.493}
+
+audit\Lib\site-packages\nbclient\client.py", line 566, in async_start_new_kernel_client
+    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
+                       ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\jupyter_core\utils\__init__.py", line 171, in wrapped
+    return _runner_map[name].run(inner)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\jupyter_core\utils\__init__.py", line 128, in run
+    return fut.result(None)
+           ~~~~~~~~~~^^^^^^
+  File "E:\Python313\Lib\concurrent\futures\_base.py", line 460, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "E:\Python313\Lib\concurrent\futures\_base.py", line 402, in __get_result
+    raise self._exception
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\jupyter_client\client.py", line 207, in _async_wait_for_ready
+    raise RuntimeError(msg)
+RuntimeError: Kernel died before replying to kernel_info
+Exception ignored in atexit callback <bound method run_sync.<locals>.wrapped of <nbclient.client.NotebookClient object at 0x00000297F1C2BCB0>>:
+Traceback (most recent call last):
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "E:\Python313\Lib\asyncio\base_events.py", line 726, in run_until_complete
+    return future.result()
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\nbclient\client.py", line 504, in _async_cleanup_kernel
+    assert self.km is not None
+AssertionError: 
+

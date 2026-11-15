@@ -1,0 +1,11 @@
+ImportError while loading conftest 'C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\tests\conftest.py'.
+tests\conftest.py:16: in <module>
+    from src.agents.orchestrator import build_graph, thread_config  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\agents\orchestrator.py:19: in <module>
+    from src.agents import assessor_agent as ass
+src\agents\assessor_agent.py:17: in <module>
+    from src.tools.code_repl import run_with_tests
+src\tools\code_repl.py:25: in <module>
+    import resource
+E   ModuleNotFoundError: No module named 'resource'

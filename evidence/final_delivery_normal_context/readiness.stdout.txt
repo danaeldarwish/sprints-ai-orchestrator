@@ -1,0 +1,7 @@
+{
+  "status": "READY",
+  "accepting_learner_requests": true,
+  "startup_ms": 1758.584,
+  "message": "Curriculum collection and preparation query succeeded.",
+  "error_type": null
+}

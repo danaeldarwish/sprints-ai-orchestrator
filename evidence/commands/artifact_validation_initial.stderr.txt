@@ -1,0 +1,10 @@
+C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\fitz\__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\validate_artifacts.py", line 34, in <module>
+    if __name__=="__main__":main()
+                            ~~~~^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\validate_artifacts.py", line 30, in main
+    assert len(charts)==1 and tables==1 and not boxes
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

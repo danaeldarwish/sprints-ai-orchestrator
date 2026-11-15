@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "--junitxml=evidence/tests_initial.xml",
+    "-rs"
+  ],
+  "cwd": ".",
+  "at": "2026-11-15T04:41:28.123140+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_s": 24.074
+}

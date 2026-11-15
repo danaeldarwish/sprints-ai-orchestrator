@@ -1,0 +1,3 @@
+{"command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "-m", "compileall", "-q", "src", "tests", "scripts"], "cwd": ".", "at": "2026-11-15T04:54:16.197833+00:00", "exit_code": 0, "timed_out": false, "duration_s": 0.959}
+
+

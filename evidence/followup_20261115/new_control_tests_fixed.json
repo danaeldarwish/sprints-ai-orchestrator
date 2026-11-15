@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.venv-audit/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/test_live_controls.py",
+    "tests/test_followup_controls.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/evidence/followup_20261115/new_control_tests_fixed.xml"
+  ],
+  "at": "2026-11-15T05:36:53.916Z",
+  "duration_ms": 24576,
+  "exit_code": 0,
+  "killed": false
+}

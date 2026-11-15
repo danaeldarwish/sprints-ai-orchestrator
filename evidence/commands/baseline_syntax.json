@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\.venv\\Scripts\\python.exe",
+    "-m",
+    "compileall",
+    "-q",
+    "src",
+    "tests"
+  ],
+  "exit_code": 0,
+  "note": "Collection only: original unsafe sandbox never executed"
+}

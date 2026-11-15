@@ -1,0 +1,16 @@
+{
+  "command": [
+    "E:/Development/Docker/App/resources/bin/docker.exe",
+    "--config",
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\followup_20261115\\docker-config",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "image",
+    "inspect",
+    "python:3.13-slim",
+    "--format",
+    "{\"id\":{{json .Id}},\"digests\":{{json .RepoDigests}},\"os\":{{json .Os}},\"arch\":{{json .Architecture}}}"
+  ],
+  "exit_code": 0,
+  "duration_s": 0.568
+}

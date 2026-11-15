@@ -1,0 +1,1 @@
+Inspect result written to file: C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.build/presentation_current/candidate.pptx.inspect.ndjson

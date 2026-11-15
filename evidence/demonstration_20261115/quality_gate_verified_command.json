@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-15T06:52:02.952Z",
+  "command": [
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.venv-audit/Scripts/python.exe",
+    "scripts/check_demo_submission.py"
+  ],
+  "exit_code": 0,
+  "signal": null,
+  "duration_ms": 1758
+}

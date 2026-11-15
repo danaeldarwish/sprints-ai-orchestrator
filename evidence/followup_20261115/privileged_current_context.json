@@ -1,0 +1,10 @@
+{
+  "command": [
+    "E:\\Development\\Docker\\App\\resources\\bin\\docker.EXE",
+    "context",
+    "show"
+  ],
+  "at": "2026-11-15T05:20:10.989249+00:00",
+  "exit_code": 0,
+  "duration_s": 1.149
+}

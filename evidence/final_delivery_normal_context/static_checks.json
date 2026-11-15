@@ -1,0 +1,44 @@
+{
+  "python_files_parsed": 66,
+  "broken_current_markdown_links": [],
+  "artifacts": {
+    "technical_report_current.pdf": {
+      "pages": 16,
+      "text_extractable": true
+    },
+    "stakeholder_presentation_current.pdf": {
+      "pages": 10,
+      "text_extractable": true
+    },
+    "pptx_slides": 10
+  },
+  "notebooks": {
+    "evaluator_optimizer_loop.ipynb": {
+      "code_cells": 4,
+      "executed_cells": 4,
+      "errors": 0
+    },
+    "evaluator_optimizer_verified.ipynb": {
+      "code_cells": 4,
+      "executed_cells": 4,
+      "errors": 0
+    }
+  },
+  "sqlite": {
+    "integrity": "ok",
+    "learners": 25,
+    "partner_openings": 16
+  },
+  "full_suite_preserved": {
+    "total": 157,
+    "passed": 157,
+    "failed": 0,
+    "skipped": 0
+  },
+  "focused_suite_preserved": {
+    "total": 70,
+    "passed": 70,
+    "failed": 0,
+    "skipped": 0
+  }
+}

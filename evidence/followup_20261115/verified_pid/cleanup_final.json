@@ -1,0 +1,21 @@
+{
+  "command": [
+    "E:/Development/Docker/App/resources/bin/docker.exe",
+    "--config",
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\followup_20261115\\verified_pid\\docker-config",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "ps",
+    "--all",
+    "--filter",
+    "name=sprints-submission-",
+    "--format",
+    "{{json .}}"
+  ],
+  "at": "2026-11-15T06:19:16.195956+00:00",
+  "exit_code": 0,
+  "duration_s": 0.601,
+  "sandbox_image": "sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d",
+  "llm": "offline",
+  "credentials": "not loaded"
+}

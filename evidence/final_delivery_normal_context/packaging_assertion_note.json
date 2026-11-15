@@ -1,0 +1,9 @@
+{
+  "application_demo_exit_code": 0,
+  "packaging_result": "Stopped on an incorrect text assertion for cross-learner denial",
+  "actual_denial_status": "denied",
+  "actual_denial_route": "deny",
+  "correction": "Validate the structured denied/deny result; preserve and reuse command receipts only after source/data/lock hash equality",
+  "application_source_changed": false,
+  "human_review_performed": false
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+    "scripts/package_submission.py"
+  ],
+  "cwd": ".",
+  "at": "2026-11-15T05:06:14.490993+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_s": 40.126
+}

@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "controls": {
+    "MemoryLimit": true,
+    "SwapLimit": true,
+    "CpuCfsPeriod": true,
+    "CpuCfsQuota": true,
+    "PidsLimit": true,
+    "OSType": "linux",
+    "SecurityOptions": [
+      "name=seccomp,profile=builtin",
+      "name=cgroupns"
+    ]
+  }
+}

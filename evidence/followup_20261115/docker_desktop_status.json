@@ -1,0 +1,11 @@
+{
+  "command": [
+    "E:/Development/Docker/App/resources/bin/docker.exe",
+    "desktop",
+    "status"
+  ],
+  "at": "2026-11-15T05:18:41.218Z",
+  "duration_ms": 771,
+  "exit_code": 1,
+  "killed": false
+}

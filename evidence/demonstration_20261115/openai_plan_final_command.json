@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-15T06:46:35.682Z",
+  "command": [
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.venv-audit/Scripts/python.exe",
+    "scripts/verify_openai.py",
+    "--plan",
+    "--output",
+    "evidence/demonstration_20261115/openai_plan_final.json"
+  ],
+  "exit_code": 0,
+  "signal": null,
+  "duration_ms": 725
+}

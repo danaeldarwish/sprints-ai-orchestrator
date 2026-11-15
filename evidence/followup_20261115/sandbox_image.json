@@ -1,0 +1,21 @@
+{
+  "base": {
+    "id": "sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90",
+    "digests": [
+      "python@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90"
+    ],
+    "os": "linux",
+    "arch": "amd64"
+  },
+  "pinned_base": "python@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90",
+  "image": {
+    "id": "sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d",
+    "os": "linux",
+    "arch": "amd64",
+    "user": "65534:65534",
+    "entrypoint": [
+      "python"
+    ],
+    "volumes": null
+  }
+}

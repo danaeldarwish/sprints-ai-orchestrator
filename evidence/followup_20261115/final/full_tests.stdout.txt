@@ -1,0 +1,105 @@
+........................................................................ [ 48%]
+........................FF....FF........................................ [ 97%]
+...                                                                      [100%]
+================================== FAILURES ===================================
+____ test_actual_isolated_execution[import math\nprint(math.sqrt(16))-ok] _____
+
+container = {'available': True, 'backend': 'linux-docker', 'image': 'sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d', 'controls': 'no-network,non-root,read-only,no-mounts,seccomp,limits'}
+code = 'import math\nprint(math.sqrt(16))', expected = 'ok'
+
+    @pytest.mark.parametrize("code,expected",[
+    ("print(sum(range(10)))","ok"),("x=1\nprint(1/0)","runtime_error"),
+    ("while True: pass","timeout"),("x=[0]*(10**10)","runtime_error"),
+    ("while True: print('a'*1000)","output_limit"),
+    ("import math\nprint(math.sqrt(16))","ok"),
+    ])
+    @pytest.mark.sandbox_integration
+    def test_actual_isolated_execution(container,code,expected):
+        result=run(code,timeout_s=2 if expected=="timeout" else 5)
+>       assert result.status==expected and result.exit_code is not None
+E       AssertionError: assert ('unable_to_verify' == 'ok'
+E         
+E         - ok
+E         + unable_to_verify)
+
+tests\test_sandbox.py:83: AssertionError
+_ test_actual_kernel_boundary_independent_of_ast[import os\nprint(os.getuid())-65534] _
+
+container = {'available': True, 'backend': 'linux-docker', 'image': 'sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d', 'controls': 'no-network,non-root,read-only,no-mounts,seccomp,limits'}
+code = 'import os\nprint(os.getuid())', expected = '65534'
+
+    @pytest.mark.parametrize("code,expected",[
+    ("import os\nprint(os.getuid())","65534"),
+    ("import os\nprint(os.path.exists('/workspace'))\nprint(os.path.exists('/host'))","False"),
+    ("import os\nprint(os.environ.get('OPENAI_API_KEY','ABSENT'))","ABSENT"),
+    ("import os\ntry:\n    os.mkdir('/escape')\nexcept OSError:\n    print('READ_ONLY')","READ_ONLY"),
+    ("import subprocess\nprint(subprocess.run(['python','-I','-S','-c','import os;print(os.getuid())'],capture_output=True,text=True).stdout.strip())","65534"),
+    ("import os\nprint(os.path.exists('/proc/1/root/host'))","False"),
+    ("import subprocess\nchildren=[]\ntry:\n    for i in range(64):\n        children.append(subprocess.Popen(['python','-c','import time;time.sleep(10)']))\nexcept Exception:\n    print('PROCESS_LIMIT')\nfinally:\n    for child in children:\n        child.terminate()\n    for child in children:\n        child.wait()","PROCESS_LIMIT"),
+    ("import socket\ns=socket.socket()\ns.settimeout(.2)\ntry:\n    s.connect(('1.1.1.1',443))\nexcept OSError:\n    print('NO_NETWORK')","NO_NETWORK"),
+    ])
+    @pytest.mark.sandbox_integration
+    def test_actual_kernel_boundary_independent_of_ast(container,code,expected):
+        payload=json.dumps({"code":code,"harness":"","allowed_modules":["os","socket","subprocess"],"max_output_chars":4000})
+        out=m._execute_container(payload,5)
+>       assert out.status=="ok" and expected in out.stdout
+E       AssertionError: assert ('timeout' == 'ok'
+E         
+E         - ok
+E         + timeout)
+
+tests\test_sandbox.py:100: AssertionError
+_ test_actual_kernel_boundary_independent_of_ast[import os\nprint(os.path.exists('/proc/1/root/host'))-False] _
+
+container = {'available': True, 'backend': 'linux-docker', 'image': 'sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d', 'controls': 'no-network,non-root,read-only,no-mounts,seccomp,limits'}
+code = "import os\nprint(os.path.exists('/proc/1/root/host'))"
+expected = 'False'
+
+    @pytest.mark.parametrize("code,expected",[
+    ("import os\nprint(os.getuid())","65534"),
+    ("import os\nprint(os.path.exists('/workspace'))\nprint(os.path.exists('/host'))","False"),
+    ("import os\nprint(os.environ.get('OPENAI_API_KEY','ABSENT'))","ABSENT"),
+    ("import os\ntry:\n    os.mkdir('/escape')\nexcept OSError:\n    print('READ_ONLY')","READ_ONLY"),
+    ("import subprocess\nprint(subprocess.run(['python','-I','-S','-c','import os;print(os.getuid())'],capture_output=True,text=True).stdout.strip())","65534"),
+    ("import os\nprint(os.path.exists('/proc/1/root/host'))","False"),
+    ("import subprocess\nchildren=[]\ntry:\n    for i in range(64):\n        children.append(subprocess.Popen(['python','-c','import time;time.sleep(10)']))\nexcept Exception:\n    print('PROCESS_LIMIT')\nfinally:\n    for child in children:\n        child.terminate()\n    for child in children:\n        child.wait()","PROCESS_LIMIT"),
+    ("import socket\ns=socket.socket()\ns.settimeout(.2)\ntry:\n    s.connect(('1.1.1.1',443))\nexcept OSError:\n    print('NO_NETWORK')","NO_NETWORK"),
+    ])
+    @pytest.mark.sandbox_integration
+    def test_actual_kernel_boundary_independent_of_ast(container,code,expected):
+        payload=json.dumps({"code":code,"harness":"","allowed_modules":["os","socket","subprocess"],"max_output_chars":4000})
+        out=m._execute_container(payload,5)
+>       assert out.status=="ok" and expected in out.stdout
+E       AssertionError: assert ('timeout' == 'ok'
+E         
+E         - ok
+E         + timeout)
+
+tests\test_sandbox.py:100: AssertionError
+_____ test_actual_kernel_boundary_independent_of_ast[code6-PROCESS_LIMIT] _____
+
+container = {'available': True, 'backend': 'linux-docker', 'image': 'sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d', 'controls': 'no-network,non-root,read-only,no-mounts,seccomp,limits'}
+code = "import subprocess\nchildren=[]\ntry:\n    for i in range(64):\n        children.append(subprocess.Popen(['python','-c...T')\nfinally:\n    for child in children:\n        child.terminate()\n    for child in children:\n        child.wait()"
+expected = 'PROCESS_LIMIT'
+
+    @pytest.mark.parametrize("code,expected",[
+    ("import os\nprint(os.getuid())","65534"),
+    ("import os\nprint(os.path.exists('/workspace'))\nprint(os.path.exists('/host'))","False"),
+    ("import os\nprint(os.environ.get('OPENAI_API_KEY','ABSENT'))","ABSENT"),
+    ("import os\ntry:\n    os.mkdir('/escape')\nexcept OSError:\n    print('READ_ONLY')","READ_ONLY"),
+    ("import subprocess\nprint(subprocess.run(['python','-I','-S','-c','import os;print(os.getuid())'],capture_output=True,text=True).stdout.strip())","65534"),
+    ("import os\nprint(os.path.exists('/proc/1/root/host'))","False"),
+    ("import subprocess\nchildren=[]\ntry:\n    for i in range(64):\n        children.append(subprocess.Popen(['python','-c','import time;time.sleep(10)']))\nexcept Exception:\n    print('PROCESS_LIMIT')\nfinally:\n    for child in children:\n        child.terminate()\n    for child in children:\n        child.wait()","PROCESS_LIMIT"),
+    ("import socket\ns=socket.socket()\ns.settimeout(.2)\ntry:\n    s.connect(('1.1.1.1',443))\nexcept OSError:\n    print('NO_NETWORK')","NO_NETWORK"),
+    ])
+    @pytest.mark.sandbox_integration
+    def test_actual_kernel_boundary_independent_of_ast(container,code,expected):
+        payload=json.dumps({"code":code,"harness":"","allowed_modules":["os","socket","subprocess"],"max_output_chars":4000})
+        out=m._execute_container(payload,5)
+>       assert out.status=="ok" and expected in out.stdout
+E       AssertionError: assert ('timeout' == 'ok'
+E         
+E         - ok
+E         + timeout)
+
+tests\test_sandbox.py:100: AssertionError

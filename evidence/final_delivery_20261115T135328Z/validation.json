@@ -1,0 +1,224 @@
+{
+  "at": "2026-11-15T13:53:46.946820+00:00",
+  "static": {
+    "python_files_parsed": 66,
+    "broken_current_markdown_links": [],
+    "artifacts": {
+      "technical_report_current.pdf": {
+        "pages": 16,
+        "text_extractable": true
+      },
+      "stakeholder_presentation_current.pdf": {
+        "pages": 10,
+        "text_extractable": true
+      },
+      "pptx_slides": 10
+    },
+    "notebooks": {
+      "evaluator_optimizer_loop.ipynb": {
+        "code_cells": 4,
+        "executed_cells": 4,
+        "errors": 0
+      },
+      "evaluator_optimizer_verified.ipynb": {
+        "code_cells": 4,
+        "executed_cells": 4,
+        "errors": 0
+      }
+    },
+    "sqlite": {
+      "integrity": "ok",
+      "learners": 25,
+      "partner_openings": 16
+    },
+    "full_suite_preserved": {
+      "total": 157,
+      "passed": 157,
+      "failed": 0,
+      "skipped": 0
+    },
+    "focused_suite_preserved": {
+      "total": 70,
+      "passed": 70,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "security": {
+    "scope": "All payload bytes, recursively expanded ZIP/PPTX/XLSX members; PDF extracted text/metadata and read-only SQLite text inspected separately",
+    "patterns": [
+      "provider_key",
+      "github_token",
+      "private_key",
+      "aws_access_id",
+      "credential_url"
+    ],
+    "findings": [],
+    "files": 912,
+    "nested_archives": 7,
+    "expanded_bytes": 12058484,
+    "limitations": [
+      "Pattern scan is not a guarantee of absence of all secrets",
+      "Supplied learner names, progress and salary preferences are intentionally included; keep private and obtain publication authorization"
+    ]
+  },
+  "commands": [
+    {
+      "at": "2026-11-15T13:51:00.428190+00:00",
+      "command": [
+        "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.build\\publish-20261115T135038Z",
+      "exit_code": 0,
+      "duration_s": 6.216,
+      "mode": "offline/hashing; credential-free child environment"
+    },
+    {
+      "at": "2026-11-15T13:51:13.870188+00:00",
+      "command": [
+        "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+        "-m",
+        "src.main",
+        "build-db"
+      ],
+      "cwd": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.build\\publish-20261115T135038Z",
+      "exit_code": 0,
+      "duration_s": 13.374,
+      "mode": "offline/hashing; credential-free child environment"
+    },
+    {
+      "at": "2026-11-15T13:51:31.126996+00:00",
+      "command": [
+        "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+        "-m",
+        "src.main",
+        "ingest"
+      ],
+      "cwd": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.build\\publish-20261115T135038Z",
+      "exit_code": 0,
+      "duration_s": 17.234,
+      "mode": "offline/hashing; credential-free child environment"
+    },
+    {
+      "at": "2026-11-15T13:51:44.315602+00:00",
+      "command": [
+        "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+        "-m",
+        "src.main",
+        "readiness"
+      ],
+      "cwd": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.build\\publish-20261115T135038Z",
+      "exit_code": 0,
+      "duration_s": 13.157,
+      "mode": "offline/hashing; credential-free child environment"
+    },
+    {
+      "at": "2026-11-15T13:51:55.598317+00:00",
+      "command": [
+        "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+        "-m",
+        "src.main",
+        "sandbox-status"
+      ],
+      "cwd": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.build\\publish-20261115T135038Z",
+      "exit_code": 0,
+      "duration_s": 11.273,
+      "mode": "offline/hashing; credential-free child environment"
+    },
+    {
+      "at": "2026-11-15T13:52:24.473120+00:00",
+      "command": [
+        "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+        "-m",
+        "src.main",
+        "demo",
+        "--verbose"
+      ],
+      "cwd": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.build\\publish-20261115T135038Z",
+      "exit_code": 0,
+      "duration_s": 28.85,
+      "mode": "offline/hashing; credential-free child environment"
+    }
+  ],
+  "execution_reused_from": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\final_delivery_normal_context",
+  "execution_reuse_basis": "Application/data/sandbox/lock bytes match the source copy named in the original execution receipts",
+  "actual_demo_checks_pass": true,
+  "demo_scenarios": {
+    "curriculum": {
+      "status": "answered",
+      "route": "advisor_curriculum",
+      "assessment": {},
+      "refinement_count": 0,
+      "sources": [
+        "02_langchain_prompts_parsers_and_tools.md",
+        "04_langgraph_orchestration.md",
+        "05_memory_human_in_the_loop_and_safety.md"
+      ]
+    },
+    "buggy_code": {
+      "status": "graded",
+      "route": "assessor",
+      "assessment": {
+        "score": 60,
+        "feedback_points": [
+          "Passed 3/6 tests (correctness 35/70).",
+          "Test failed for input ([80, None, 90],): expected 85.0, got 56.67.",
+          "Test failed for input ([],): expected 0.0, got ZeroDivisionError: division by zero.",
+          "Readability: add a docstring explaining what the code does (-5)."
+        ],
+        "pass_status": "fail"
+      },
+      "refinement_count": 0
+    },
+    "corrected_code": {
+      "status": "graded",
+      "route": "assessor",
+      "assessment": {
+        "score": 100,
+        "feedback_points": [
+          "Passed 6/6 tests (correctness 70/70).",
+          "All tests passed and the code is clean and readable. Excellent work."
+        ],
+        "pass_status": "pass"
+      },
+      "refinement_count": 0
+    },
+    "database_career": {
+      "status": "released",
+      "route": "advisor_career",
+      "assessment": {},
+      "refinement_count": 0
+    },
+    "tier1_pending": {
+      "status": "pending_human_review",
+      "route": "advisor_career"
+    },
+    "other_learner_denied": {
+      "status": "denied",
+      "route": "deny",
+      "assessment": {},
+      "refinement_count": 0
+    }
+  },
+  "prior_artifacts_preserved": {
+    "prior_submission_hashes.json": {
+      "checked_files": 10,
+      "mismatches": []
+    },
+    "prior_evidence_hashes.json": {
+      "checked_files": 463,
+      "mismatches": []
+    }
+  },
+  "application_source_changed": false,
+  "full_suite_repeated": false,
+  "fresh_environment_installation_repeated": false,
+  "paid_requests": 0,
+  "automated_human_decisions": 0,
+  "video": "PENDING",
+  "github_url": null,
+  "verdict": "NOT READY"
+}

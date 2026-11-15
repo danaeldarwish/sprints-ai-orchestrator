@@ -1,0 +1,16 @@
+{
+  "learner_csv_unchanged": true,
+  "sqlite_original_bytes_unchanged": true,
+  "learner_rows": 25,
+  "sqlite_integrity": "ok",
+  "sqlite_learners": 25,
+  "synthetic_openings": 16,
+  "benchmark_corpus_matches": true,
+  "historical_link_check_exclusion": "evidence/followup_20261115/before/: unchanged snapshots have original relative-link context",
+  "broken_internal_links": [],
+  "potential_secret_patterns": [],
+  "original_archive_unchanged": true,
+  "video_status": "PENDING",
+  "verdict": "NOT READY",
+  "technical_checks_pass": true
+}

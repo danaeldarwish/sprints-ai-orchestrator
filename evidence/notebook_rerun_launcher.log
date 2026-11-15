@@ -1,0 +1,37 @@
+{"command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "scripts/execute_notebook.py"], "cwd": ".", "at": "2026-11-15T04:44:47.374328+00:00", "exit_code": 1, "timed_out": false, "duration_s": 16.242}
+
+l last):
+  File "E:\Python313\Lib\shutil.py", line 625, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\sh\\AppData\\Local\\Temp\\sprints-kernel-5l5_7et5\\ipython\\profile_default\\history.sqlite'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\execute_notebook.py", line 37, in <module>
+    if __name__=="__main__":main()
+                            ~~~~^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\execute_notebook.py", line 24, in main
+    with tempfile.TemporaryDirectory(prefix="sprints-kernel-") as kernel:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python313\Lib\tempfile.py", line 952, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "E:\Python313\Lib\tempfile.py", line 956, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python313\Lib\tempfile.py", line 936, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "E:\Python313\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "E:\Python313\Lib\shutil.py", line 629, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python313\Lib\tempfile.py", line 911, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\sh\\AppData\\Local\\Temp\\sprints-kernel-5l5_7et5\\ipython\\profile_default\\history.sqlite'
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+

@@ -1,0 +1,2 @@
+Inspect result written to file: C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.build/presentation_current/candidate.pptx.inspect.ndjson
+{"slides":10,"path":"C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\submission\\stakeholder_presentation_current.pptx","rendered":10}

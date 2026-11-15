@@ -1,0 +1,14 @@
+langgraph==1.2.20
+langchain-core==1.7.6
+langchain-text-splitters==1.1.3
+langchain-openai==1.7.4
+chromadb==1.5.9
+pydantic==2.14.3
+tiktoken==0.14.0
+pytest==9.2.0
+nbformat==5.11.1
+nbconvert==7.17.2
+ipykernel==7.4.0
+
+# Direct dependency of the controlled verification transport.
+httpx==0.28.1

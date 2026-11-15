@@ -1,0 +1,17 @@
+flowchart TB
+    L[Mock authenticated learner] --> S[OrchestratorService strict request and owned thread]
+    S --> G[LangGraph TypedDict state]
+    G <--> M[MemorySaver private checkpoints]
+    G --> R[Advisor retrieve critique reformulate]
+    R <--> C[Actual ChromaDB / hash embeddings]
+    G --> Q[Advisor scoped SQL ReAct]
+    Q <--> D[Actual SQLite / supplied learners / synthetic openings]
+    Q --> H[Tier-1 interrupt]
+    H --> V[Scoped trusted reviewer / strict one-time decision]
+    V --> F[Release or withhold]
+    G --> A[Assessor container-only execute]
+    A --> U[Unable to verify when sandbox unavailable]
+    A --> B[Structured grade and judge]
+    B --> O[Up to 3 refinements]
+    O --> B
+    B --> Z[Verified or provisional feedback]

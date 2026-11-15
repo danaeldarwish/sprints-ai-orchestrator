@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-15T13:44:48.442Z",
+  "installed_capture_app": "Windows Snipping Tool returned by sky.list_apps",
+  "obs_at_standard_path": false,
+  "free_cam_at_standard_path": false,
+  "ffmpeg_ffprobe_on_PATH": false,
+  "ui_inspection": "launch_app returned Computer Use app approval timed out",
+  "capture_started": false,
+  "screen_capture_permission": "not granted",
+  "video_status": "PENDING",
+  "video_path": null
+}

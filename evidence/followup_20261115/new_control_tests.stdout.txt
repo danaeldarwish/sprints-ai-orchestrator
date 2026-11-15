@@ -1,0 +1,13 @@
+......F...........                                                       [100%]
+================================== FAILURES ===================================
+______________________ test_stream_cannot_bypass_budget _______________________
+
+    def test_stream_cannot_bypass_budget():
+        hits=[];a=model(RequestBudget(),lambda req:hits.append(req) or good(req))
+>       with pytest.raises(LiveRunStopped):list(a.stream('one'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE LiveRunStopped
+
+tests\test_live_controls.py:46: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_live_controls.py::test_stream_cannot_bypass_budget - Failed...

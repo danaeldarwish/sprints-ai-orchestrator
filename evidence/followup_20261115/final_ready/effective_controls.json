@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+    "-m",
+    "scripts.verify_sandbox_controls"
+  ],
+  "at": "2026-11-15T06:07:47.875394+00:00",
+  "exit_code": 0,
+  "duration_s": 15.522,
+  "sandbox_image": "sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d",
+  "llm": "offline",
+  "credentials": "not loaded"
+}

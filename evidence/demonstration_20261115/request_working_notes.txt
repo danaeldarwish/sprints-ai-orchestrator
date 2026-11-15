@@ -1,0 +1,143 @@
+Act as a Principal AI Engineer, Software Architect, and Graduation Project Quality Lead.
+
+PROJECT:
+Sprints Multi-Agent AI Career & Assessment Orchestrator
+
+PROJECT ROOT:
+C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator
+
+CURRENT VERIFIED STATUS:
+
+- Docker Linux Engine is available and working.
+- 157 tests PASSED, 0 failed, 0 skipped.
+- All 14 previously skipped sandbox tests were executed.
+- Real-container sandbox security checks passed.
+- Python execution remains isolated from the Windows host.
+- ChromaDB warm retrieval p95: 16.128 ms.
+- Prepared first-query p95: 13.129 ms.
+- Unprepared cold retrieval p95: 1591.568 ms — remains PARTIAL.
+- OpenAI live inference: NOT EXECUTED.
+- Technical report PDF and 10-slide presentation exist but are outdated.
+- Demo recording: MISSING.
+- Shareable repository URL: MISSING.
+- Existing submission ZIP is an outdated snapshot and must be preserved.
+
+OBJECTIVE:
+Prepare the project for its final demonstration and submission without repeating expensive security tests or making unauthorized API calls.
+
+PHASE 1 — PRESERVE AND REVIEW
+
+Read the existing readiness_followup.md, follow-up manifest, requirements matrix, existing report, presentation, and demo script.
+
+Do not rebuild Docker, reinstall dependencies, or rerun the full 157-test suite unless source modifications make it necessary.
+
+Preserve all successful evidence.
+
+PHASE 2 — RAG STARTUP READINESS
+
+Evaluate whether ChromaDB can be prepared during application startup before accepting learner requests.
+
+Implement or verify an explicit readiness gate:
+
+- Initialize the vector store.
+- Verify collection availability.
+- Complete necessary index preparation.
+- Only mark the application READY after initialization succeeds.
+- Return a clear unavailable status if preparation fails.
+
+Keep unprepared cold-start measurements visible in the report.
+
+Do not misrepresent prepared-query performance as an improvement in unprepared cold retrieval.
+
+Document the exact operational interpretation of the 1000 ms acceptance criterion.
+
+PHASE 3 — PREPARE REAL OPENAI VERIFICATION
+
+Review model availability and compatibility.
+
+The previously selected gpt-4o-mini-2024-07-18 is deprecated, with a published shutdown date of January 14, 2027.
+
+Check whether the existing adapter can use an available supported OpenAI model without altering the project architecture.
+
+Prepare an explicit preflight covering:
+- Model availability.
+- Project authorization and quota.
+- Current pricing.
+- Maximum 24 total completion attempts, including parser repairs.
+- Maximum input/output tokens.
+- Per-request timeout.
+- Zero SDK retries.
+- A fail-closed request and estimated-cost budget.
+- Genuine response, usage, and exit-code evidence.
+- Stop immediately on authentication, rate-limit, quota, or unexpected provider errors.
+
+Do not access or reuse credentials from other projects.
+
+DO NOT EXECUTE ANY OPENAI REQUESTS.
+
+PHASE 4 — MAKE DEMO RECORDING READY
+
+Prepare a fully reproducible 3–5 minute walkthrough using the actual application.
+
+The demo must demonstrate:
+1. Curriculum Q&A with grounded retrieval.
+2. Python grading inside the verified Docker sandbox.
+3. Evaluator-Optimizer feedback.
+4. SQLite-backed learner progress and EGP salary.
+5. Employer matching based on actual database records.
+6. Tier-1 Fawry recommendation paused for human review.
+7. Explicit authorized review and safe resume.
+
+Prepare the exact execution commands and recording sequence.
+
+Do not automatically approve any placement to simplify the demo.
+
+If live LLM inference is unavailable, explicitly label scripted or heuristic demonstrations.
+
+Do not fabricate video recordings or claim the video exists.
+
+PHASE 5 — UPDATE DOCUMENTATION
+
+Update the technical report and stakeholder presentation using the latest verified findings.
+
+Include:
+- 157 successful tests.
+- Actual Docker sandbox verification.
+- Security boundaries and limitations.
+- Latest RAG benchmarks.
+- OpenAI verification status.
+- Actual versus simulated model execution.
+- HITL authorization limitations.
+- The unmeasured 80% waiting-time reduction target.
+- Remaining production-readiness risks.
+
+Keep the technical report professional and the presentation at 8–10 slides.
+
+PHASE 6 — FINAL SUBMISSION READINESS
+
+Check:
+- All source files and tests.
+- Executed Jupyter notebook.
+- SQLite database and original learner CSV.
+- Updated technical report PDF.
+- Updated stakeholder presentation PPTX/PDF.
+- Demo video or genuine recording link.
+- Shareable GitHub repository/workspace link.
+- Final ZIP completeness and security.
+
+Do not publish, push to GitHub, overwrite the existing final ZIP, or claim the video is complete.
+
+FINAL REPORT REQUIRED:
+
+A. Changes made.
+B. Updated RAG readiness behavior.
+C. OpenAI live preflight and recommended model.
+D. Exact safe live execution command, NOT EXECUTED.
+E. Demo recording commands and checklist.
+F. Updated report/deck status.
+G. Remaining missing deliverables.
+H. READY / NOT READY verdict.
+
+STOP before external API calls, publishing, or recording claims.
+
+Do not perform unnecessary repeated tests.

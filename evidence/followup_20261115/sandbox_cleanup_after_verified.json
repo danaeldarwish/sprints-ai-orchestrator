@@ -1,0 +1,17 @@
+{
+  "command": [
+    "E:/Development/Docker/App/resources/bin/docker.exe",
+    "--config",
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\followup_20261115\\docker-config",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "ps",
+    "--all",
+    "--filter",
+    "name=sprints-submission-",
+    "--format",
+    "{{json .}}"
+  ],
+  "exit_code": 0,
+  "duration_s": 0.339
+}

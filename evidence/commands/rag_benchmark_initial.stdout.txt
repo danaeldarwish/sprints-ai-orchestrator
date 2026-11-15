@@ -1,0 +1,38 @@
+{
+  "backend": "actual ChromaDB PersistentClient; deterministic hashing embeddings",
+  "tokenizer": "tiktoken:cl100k_base",
+  "ingest": {
+    "documents": 6,
+    "chunks": 7,
+    "max_chunk_tokens": 500,
+    "chunk_tokens": 500,
+    "chunk_overlap": 50,
+    "tokenizer": "tiktoken:cl100k_base",
+    "seconds": 2.459
+  },
+  "method": "nearest-rank; process-cold, OS cache not flushed; warm includes executor dispatch and embedding",
+  "cold_process": {
+    "n": 10,
+    "p50_ms": 8652.35,
+    "p95_ms": 11130.701,
+    "p99_ms": 11130.701,
+    "max_ms": 11130.701,
+    "below_1000ms_pct": 0.0
+  },
+  "cold_first_retrieve": {
+    "n": 10,
+    "p50_ms": 524.995,
+    "p95_ms": 1316.896,
+    "p99_ms": 1316.896,
+    "max_ms": 1316.896,
+    "below_1000ms_pct": 70.0
+  },
+  "warm": {
+    "n": 200,
+    "p50_ms": 5.426,
+    "p95_ms": 8.83,
+    "p99_ms": 10.677,
+    "max_ms": 11.963,
+    "below_1000ms_pct": 100.0
+  }
+}

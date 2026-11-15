@@ -1,0 +1,22 @@
+{
+  "command": [
+    "E:/Development/Docker/App/resources/bin/docker.exe",
+    "--config",
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\followup_20261115\\docker-config",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "build",
+    "--network",
+    "none",
+    "--pull=false",
+    "--build-arg",
+    "PYTHON_BASE=python@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90",
+    "--tag",
+    "sprints-grading-sandbox:verified",
+    "--file",
+    "sandbox/Dockerfile",
+    "sandbox"
+  ],
+  "exit_code": 0,
+  "duration_s": 33.009
+}

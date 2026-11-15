@@ -1,0 +1,12 @@
+{"command": ["C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe", "-m", "src.main", "demo", "--verbose"], "cwd": ".", "at": "2026-11-15T04:54:29.167978+00:00", "exit_code": 0, "timed_out": false, "duration_s": 13.84}
+Traceback (most recent call last):
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\record_command.py", line 35, in <module>
+    raise SystemExit(record(name,command))
+                     ~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\record_command.py", line 29, in record
+    print(json.dumps(meta)); print(stdout[-6000:]); print(stderr[-2000:])
+                             ~~~~~^^^^^^^^^^^^^^^^
+  File "E:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u25b6' in position 912: character maps to <undefined>

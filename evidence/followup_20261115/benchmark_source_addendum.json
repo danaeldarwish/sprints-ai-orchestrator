@@ -1,0 +1,6 @@
+{
+  "measured_source_sha256": "24b965a6e8622f8f3825021ac028ec74354817eb60964c35fc2336e2686eb8f3",
+  "current_source_sha256": "e6ad2f0c2b260e893e7f522bbc58ff0df665e311179581c599276a278d47a68a",
+  "change": "After benchmark, only NotFoundError may trigger collection ingestion. Successful retrieval, embedding, tokenizer, corpus, warm-up and timed query path are unchanged. Earlier benchmark is retained as measured; no cold-path speedup is claimed.",
+  "preserved_measured_source": "before/rag_retriever_before_framing.py"
+}

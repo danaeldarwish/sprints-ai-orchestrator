@@ -1,0 +1,6 @@
+...................................................................sssss [ 67%]
+ssssss.............................                                      [100%]
+=========================== short test summary info ===========================
+SKIPPED [6] tests\test_sandbox.py:71: Actual Linux sandbox unavailable: Local Linux Docker daemon unavailable
+SKIPPED [5] tests\test_sandbox.py:83: Actual Linux sandbox unavailable: Local Linux Docker daemon unavailable
+96 passed, 11 skipped in 11.93s

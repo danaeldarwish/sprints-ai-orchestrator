@@ -1,0 +1,518 @@
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_run
+INFO     sprints.trace:protocol.py:48    [assessor_run] AIMessage[assessor] tool_call: execute_python
+INFO     sprints.trace:protocol.py:48    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_run
+INFO     sprints.trace:protocol.py:48    [assessor_run] AIMessage[assessor] tool_call: execute_python
+INFO     sprints.trace:protocol.py:48    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_refine
+INFO     sprints.trace:protocol.py:48    [assessor_refine] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_run
+INFO     sprints.trace:protocol.py:48    [assessor_run] AIMessage[assessor] tool_call: execute_python
+INFO     sprints.trace:protocol.py:48    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_refine
+INFO     sprints.trace:protocol.py:48    [assessor_refine] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_refine
+INFO     sprints.trace:protocol.py:48    [assessor_refine] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_refine
+INFO     sprints.trace:protocol.py:48    [assessor_refine] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_run
+INFO     sprints.trace:protocol.py:48    [assessor_run] AIMessage[assessor] tool_call: execute_python
+INFO     sprints.trace:protocol.py:48    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_refine
+INFO     sprints.trace:protocol.py:48    [assessor_refine] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_refine
+INFO     sprints.trace:protocol.py:48    [assessor_refine] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_refine
+INFO     sprints.trace:protocol.py:48    [assessor_refine] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_run
+INFO     sprints.trace:protocol.py:48    [assessor_run] AIMessage[assessor] tool_call: execute_python
+INFO     sprints.trace:protocol.py:48    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:48    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_answer
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=career_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_run
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:02:31.579984053Z finished=2026-11-15T06:02:32.878271041Z
+INFO     sprints.trace:protocol.py:48    [assessor_run] AIMessage[assessor] tool_call: execute_python
+INFO     sprints.trace:protocol.py:48    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_grade
+INFO     sprints.trace:protocol.py:48    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_judge
+INFO     sprints.trace:protocol.py:48    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:48    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_answer
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:48    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_answer
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:48    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_answer
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:48    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reformulate
+INFO     sprints.trace:protocol.py:48    [advisor_reformulate] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:48    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_answer
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:48    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reformulate
+INFO     sprints.trace:protocol.py:48    [advisor_reformulate] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_answer
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:48    [hitl_gate] AIMessage[human_reviewer]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:48    [hitl_gate] AIMessage[human_reviewer]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:48    [hitl_gate] AIMessage[human_reviewer]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=career_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=assessor_run
+INFO     sprints.trace:protocol.py:48    [assessor_run] AIMessage[assessor] tool_call: execute_python
+INFO     sprints.trace:protocol.py:48    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+WARNING  sprints.db:db_queries.py:94 DB tool failure: fixture
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=career_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     httpx:_client.py:1025 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO     httpx:_client.py:1025 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO     httpx:_client.py:1025 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO     httpx:_client.py:1025 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO     httpx:_client.py:1025 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=None finished=None
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=runtime_error exit_code=1 oom=False started=None finished=None
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=runtime_error exit_code=0 oom=True started=None finished=None
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=None finished=None
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=output_limit exit_code=0 oom=False started=None finished=None
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=output_limit exit_code=0 oom=False started=None finished=None
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:02:47.244858772Z finished=2026-11-15T06:02:48.647255727Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=timeout exit_code=1 oom=False started=2026-11-15T06:02:54.639317141Z finished=2026-11-15T06:02:57.483922556Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=timeout exit_code=137 oom=False started=2026-11-15T06:03:06.052513101Z finished=2026-11-15T06:03:07.622322079Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=timeout exit_code=137 oom=False started=2026-11-15T06:03:12.764694882Z finished=2026-11-15T06:03:17.905890558Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=output_limit exit_code=3 oom=False started=2026-11-15T06:03:28.131259305Z finished=2026-11-15T06:03:30.691614081Z
+WARNING  sprints.repl:code_repl.py:263 Docker attach delayed; exit=0 container_runtime_ms=2778.560 budget_ms=5000.000
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:03:40.191096427Z finished=2026-11-15T06:03:42.969656918Z
+WARNING  sprints.repl:code_repl.py:263 Docker attach delayed; exit=0 container_runtime_ms=2861.405 budget_ms=5000.000
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:03:54.716511074Z finished=2026-11-15T06:03:57.577916554Z
+WARNING  sprints.repl:code_repl.py:263 Docker attach delayed; exit=0 container_runtime_ms=3180.302 budget_ms=5000.000
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:04:11.686143252Z finished=2026-11-15T06:04:14.86644564Z
+WARNING  sprints.repl:code_repl.py:263 Docker attach delayed; exit=0 container_runtime_ms=3095.516 budget_ms=5000.000
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:04:27.061051608Z finished=2026-11-15T06:04:30.1565677Z
+WARNING  sprints.repl:code_repl.py:263 Docker attach delayed; exit=0 container_runtime_ms=2313.106 budget_ms=5000.000
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:04:44.797861429Z finished=2026-11-15T06:04:47.110967915Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:04:54.347585672Z finished=2026-11-15T06:04:56.592840244Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:05:03.428081084Z finished=2026-11-15T06:05:05.125610677Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=timeout exit_code=137 oom=False started=2026-11-15T06:05:11.782778735Z finished=2026-11-15T06:05:16.902324041Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T06:05:23.427356747Z finished=2026-11-15T06:05:25.468766767Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=timeout exit_code=137 oom=False started=None finished=None
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=unable_to_verify exit_code=64 oom=False started=None finished=None
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=output_limit exit_code=137 oom=False started=2026-11-15T06:05:39.085641208Z finished=2026-11-15T06:05:41.36125819Z
+WARNING  sprints.repl:code_repl.py:263 Docker attach delayed; exit=0 container_runtime_ms=1000.000 budget_ms=5000.000
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T00:00:00Z finished=2026-11-15T00:00:01Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=timeout exit_code=137 oom=False started=2026-11-15T00:00:00Z finished=2026-11-15T00:00:01Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=timeout exit_code=0 oom=False started=2026-11-15T00:00:00Z finished=2026-11-15T00:00:10Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=timeout exit_code=0 oom=False started=2026-11-15T00:00:01Z finished=2026-11-15T00:00:00Z
+INFO     sprints.repl:code_repl.py:277 sandbox_result status=timeout exit_code=0 oom=False started=None finished=None
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_career
+INFO     sprints.trace:protocol.py:48    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+INFO     sprints.trace:protocol.py:48    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:48    [advisor_career] AIMessage: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_recommend
+INFO     sprints.trace:protocol.py:48    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:45 ▶ node=hitl_gate
+INFO     sprints.trace:protocol.py:48    [hitl_gate] AIMessage[human_reviewer]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=career_finalize
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:48    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reformulate
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=orchestrator
+INFO     sprints.trace:protocol.py:48    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_retrieve
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+INFO     sprints.trace:protocol.py:48    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_reflect
+INFO     sprints.trace:protocol.py:48    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+INFO     sprints.trace:protocol.py:45 ▶ node=advisor_answer
+INFO     sprints.trace:protocol.py:45 ▶ node=finalize
+INFO     sprints.trace:protocol.py:48    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Authenticated application session required
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Authenticated application session required
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Access to another learner is forbidden
+WARNING  sprints.db:db_queries.py:94 DB tool failure: ad-hoc SQL is disabled
+WARNING  sprints.db:db_queries.py:94 DB tool failure: ad-hoc SQL is disabled
+WARNING  sprints.db:db_queries.py:94 DB tool failure: ad-hoc SQL is disabled
+WARNING  sprints.db:db_queries.py:94 DB tool failure: ad-hoc SQL is disabled
+WARNING  sprints.db:db_queries.py:94 DB tool failure: ad-hoc SQL is disabled
+WARNING  sprints.db:db_queries.py:94 DB tool failure: ad-hoc SQL is disabled
+WARNING  sprints.db:db_queries.py:94 DB tool failure: fixture unavailable
+WARNING  sprints.db:db_queries.py:94 DB tool failure: fixture unavailable
+WARNING  sprints.db:db_queries.py:94 DB tool failure: Authenticated application session required

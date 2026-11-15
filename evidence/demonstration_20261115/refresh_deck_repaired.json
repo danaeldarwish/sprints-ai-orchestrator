@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-15T06:45:15.528Z",
+  "command": [
+    "C:/Users/sh/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe",
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator/.build/refresh_deck.mjs",
+    "C:/Users/sh/OneDrive/Documents/sprint1_gp/sprints-ai-orchestrator/sprints-ai-orchestrator"
+  ],
+  "exit_code": 1,
+  "signal": null,
+  "duration_ms": 20006
+}

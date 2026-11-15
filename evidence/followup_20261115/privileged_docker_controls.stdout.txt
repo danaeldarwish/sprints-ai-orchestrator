@@ -1,0 +1,1 @@
+"linux" true true true true ["name=seccomp,profile=builtin","name=cgroupns"]

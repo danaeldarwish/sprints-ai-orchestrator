@@ -1,0 +1,49 @@
+{
+  "archive": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\submission\\sprints-ai-orchestrator-final.zip",
+  "sha256": "b7bf8908db005675b4fa344b03f3037b8d8fc82586edaf1401e6ab6d3603c234",
+  "zip_integrity": "PASS",
+  "payload_files": 189,
+  "all_payload_hashes_match": true,
+  "extraction": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.build\\archive-a0e2771387a6468d9e98bcdd225b3858\\sprints-ai-orchestrator",
+  "isolated_environment": "fresh .venv-audit installed for this audit; locked versions",
+  "commands": [
+    {
+      "name": "archive_import",
+      "command": [
+        "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+        "-c",
+        "from pathlib import Path; import src; import src.agents.orchestrator; print(Path(src.__file__).resolve()); assert Path(src.__file__).resolve().is_relative_to(Path.cwd())"
+      ],
+      "exit_code": 0,
+      "duration_s": 5.632
+    },
+    {
+      "name": "archive_tests",
+      "command": [
+        "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "--junitxml=C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\evidence\\archive_tests.xml",
+        "-rs"
+      ],
+      "exit_code": 0,
+      "duration_s": 21.72
+    },
+    {
+      "name": "archive_demo",
+      "command": [
+        "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+        "-m",
+        "src.main",
+        "demo",
+        "--verbose"
+      ],
+      "exit_code": 0,
+      "duration_s": 10.364
+    }
+  ],
+  "live_llm": "NOT VERIFIED",
+  "sandbox": "Unable to verify; real integration skipped",
+  "video": "PENDING",
+  "verdict": "NOT READY"
+}

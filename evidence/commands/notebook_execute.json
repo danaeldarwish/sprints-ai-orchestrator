@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+    "scripts/execute_notebook.py"
+  ],
+  "cwd": ".",
+  "at": "2026-11-15T04:46:05.042632+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_s": 17.486
+}

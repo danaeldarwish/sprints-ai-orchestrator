@@ -1,0 +1,365 @@
+{
+  "at": "2026-11-15T06:20:21.254327+00:00",
+  "verdict": "NOT READY",
+  "tests": {
+    "total": 157,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 157,
+    "original_14": {
+      "total": 14,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 14
+    },
+    "additional_real": {
+      "total": 2,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 2
+    }
+  },
+  "sandbox_verified_in_scope": true,
+  "previous_full": {
+    "total": 141,
+    "failed": 4,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 137,
+    "original_14": {
+      "total": 14,
+      "failed": 4,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 10
+    },
+    "additional_real": {
+      "total": 0,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 0
+    }
+  },
+  "previous_framed_full": {
+    "total": 147,
+    "failed": 4,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 143,
+    "original_14": {
+      "total": 14,
+      "failed": 4,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 10
+    },
+    "additional_real": {
+      "total": 2,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 2
+    }
+  },
+  "previous_exit_proof_full": {
+    "total": 152,
+    "failed": 3,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 149,
+    "original_14": {
+      "total": 14,
+      "failed": 3,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 11
+    },
+    "additional_real": {
+      "total": 2,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 2
+    }
+  },
+  "previous_readiness_full": {
+    "total": 157,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 156,
+    "original_14": {
+      "total": 14,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 13
+    },
+    "additional_real": {
+      "total": 2,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 2
+    }
+  },
+  "notebook": {
+    "notebook": "notebooks\\evaluator_optimizer_verified.ipynb",
+    "all_executed": true,
+    "code_cells": 4,
+    "errors": 0,
+    "learner_execution": "actual restricted Linux Docker",
+    "reasoning": "offline deterministic; faulty grader injection explicitly labeled",
+    "image": "sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d"
+  },
+  "scenarios": {
+    "mode": "OFFLINE: no OpenAI requests; no credentials accessed",
+    "sandbox": {
+      "available": true,
+      "backend": "linux-docker",
+      "image": "sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d",
+      "controls": "no-network,non-root,read-only,no-mounts,seccomp,limits"
+    },
+    "scenarios": [
+      {
+        "scenario": "1_curriculum",
+        "evidence": "real local graph and tools; heuristic reasoner",
+        "result": {
+          "status": "answered",
+          "route": "advisor_curriculum",
+          "final_answer": "With MemorySaver, each conversation is stored under a thread ID passed in the run configuration. The trusted application allocates an opaque thread ID for each authenticated mock learner. MemorySaver keeps data in process memory; production systems use a database-backed checkpointer such as SQLite or Postgres so state survives restarts.\n\nSources: 05_memory_human_in_the_loop_and_safety.md",
+          "turn_count": 1,
+          "assessment": {},
+          "refinement_count": 0,
+          "grader_calls": 0,
+          "needs_human_review": false,
+          "retrieval_attempts": 2,
+          "sources": [
+            "02_langchain_prompts_parsers_and_tools.md",
+            "04_langgraph_orchestration.md",
+            "05_memory_human_in_the_loop_and_safety.md"
+          ]
+        },
+        "checks_passed": true
+      },
+      {
+        "scenario": "2_buggy_code",
+        "evidence": "real local graph and tools; heuristic reasoner",
+        "result": {
+          "status": "graded",
+          "route": "assessor",
+          "final_answer": "Score: 60/100 - FAIL (pass mark 70)\n- Passed 3/6 tests (correctness 35/70).\n- Test failed for input ([80, None, 90],): expected 85.0, got 56.67.\n- Test failed for input ([],): expected 0.0, got ZeroDivisionError: division by zero.\n- Readability: add a docstring explaining what the code does (-5).",
+          "turn_count": 1,
+          "assessment": {
+            "score": 60,
+            "feedback_points": [
+              "Passed 3/6 tests (correctness 35/70).",
+              "Test failed for input ([80, None, 90],): expected 85.0, got 56.67.",
+              "Test failed for input ([],): expected 0.0, got ZeroDivisionError: division by zero.",
+              "Readability: add a docstring explaining what the code does (-5)."
+            ],
+            "pass_status": "fail"
+          },
+          "refinement_count": 0,
+          "grader_calls": 1,
+          "needs_human_review": false,
+          "retrieval_attempts": 0
+        },
+        "checks_passed": true
+      },
+      {
+        "scenario": "3_corrected_code",
+        "evidence": "real local graph and tools; heuristic reasoner",
+        "result": {
+          "status": "graded",
+          "route": "assessor",
+          "final_answer": "Score: 100/100 - PASS (pass mark 70)\n- Passed 6/6 tests (correctness 70/70).\n- All tests passed and the code is clean and readable. Excellent work.",
+          "turn_count": 2,
+          "assessment": {
+            "score": 100,
+            "feedback_points": [
+              "Passed 6/6 tests (correctness 70/70).",
+              "All tests passed and the code is clean and readable. Excellent work."
+            ],
+            "pass_status": "pass"
+          },
+          "refinement_count": 0,
+          "grader_calls": 1,
+          "needs_human_review": false,
+          "retrieval_attempts": 0
+        },
+        "checks_passed": true
+      },
+      {
+        "scenario": "4_sqlite_matching",
+        "evidence": "real local graph and tools; heuristic reasoner",
+        "result": {
+          "status": "released",
+          "route": "advisor_career",
+          "final_answer": "Placement review for Karim Hassan (Frontend): 15 modules, Python score 88, target 15,000 EGP per month.\nEligible openings:\n- Swvl: Frontend Engineer (OPN-SWVL-F), salary band 9,900-18,000 EGP\nThese results come from your Sprints records. They are not a job offer.\nPartner openings are synthetic POC seed data.",
+          "turn_count": 1,
+          "assessment": {},
+          "refinement_count": 0,
+          "grader_calls": 0,
+          "needs_human_review": false,
+          "retrieval_attempts": 0
+        },
+        "checks_passed": true
+      },
+      {
+        "scenario": "5_tier1_pending_approve_fixture",
+        "evidence": "real local graph and tools; heuristic reasoner",
+        "result": {
+          "status": "pending_human_review",
+          "route": "advisor_career",
+          "pending_id": "6c7b452cad7436ef5505e18c6439cd654e2a26b641e720f7",
+          "final_answer": "Your placement recommendation is pending an authorized human review.",
+          "turn_count": 1
+        },
+        "transition_fixture": {
+          "status": "approved_by_human",
+          "route": "advisor_career",
+          "final_answer": "Placement review for Ali Mostafa (Advanced Agentic AI): 12 modules, Python score 98, target 40,000 EGP per month.\nEligible openings:\n- Fawry: Agentic AI Engineer (OPN-FAWR-AAA), salary band 25,000-48,000 EGP\n- Swvl: Agentic AI Engineer (OPN-SWVL-AAA), salary band 22,500-43,200 EGP\n- e& Egypt: Agentic AI Engineer (OPN-EEGY-AAA), salary band 25,000-48,000 EGP\nThese results come from your Sprints records. They are not a job offer.\nPartner openings are synthetic POC seed data.\n\nApproved by Sprints career advisor (mock-career-reviewer).",
+          "turn_count": 1,
+          "assessment": {},
+          "refinement_count": 0,
+          "grader_calls": 0,
+          "needs_human_review": false,
+          "retrieval_attempts": 0
+        },
+        "replay": "denied",
+        "checks_passed": true
+      },
+      {
+        "scenario": "5_tier1_pending_reject_fixture",
+        "evidence": "real local graph and tools; heuristic reasoner",
+        "result": {
+          "status": "pending_human_review",
+          "route": "advisor_career",
+          "pending_id": "83aabe48d142f4caf603a500429b63e359c86113846d2126",
+          "final_answer": "Your placement recommendation is pending an authorized human review.",
+          "turn_count": 1
+        },
+        "transition_fixture": {
+          "status": "rejected_by_human",
+          "route": "advisor_career",
+          "final_answer": "Your placement recommendation is on hold. A Sprints career advisor will contact you with next steps.",
+          "turn_count": 1,
+          "assessment": {},
+          "refinement_count": 0,
+          "grader_calls": 0,
+          "needs_human_review": false,
+          "retrieval_attempts": 0
+        },
+        "replay": "denied",
+        "checks_passed": true
+      },
+      {
+        "checks_passed": true,
+        "scenario": "6_learner_isolation",
+        "result": {
+          "direct_other_profile": "unable_to_verify",
+          "checkpoint_injection": "denied"
+        },
+        "own_turn_count": 1
+      }
+    ],
+    "review_audit": [
+      {
+        "at": "2026-11-15T06:19:09.468874+00:00",
+        "action": "pending",
+        "pending_id": "6c7b452cad7436ef5505e18c6439cd654e2a26b641e720f7",
+        "actor_role": "learner"
+      },
+      {
+        "at": "2026-11-15T06:19:09.489233+00:00",
+        "action": "approved",
+        "pending_id": "6c7b452cad7436ef5505e18c6439cd654e2a26b641e720f7",
+        "actor_role": "reviewer"
+      },
+      {
+        "at": "2026-11-15T06:19:09.586351+00:00",
+        "action": "pending",
+        "pending_id": "83aabe48d142f4caf603a500429b63e359c86113846d2126",
+        "actor_role": "learner"
+      },
+      {
+        "at": "2026-11-15T06:19:09.607749+00:00",
+        "action": "rejected",
+        "pending_id": "83aabe48d142f4caf603a500429b63e359c86113846d2126",
+        "actor_role": "reviewer"
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "path": "README.md",
+      "exists": true,
+      "sha256": "09ea06675134bc793a96c4934850a4309f0c4175e874f94636cab37859c805ce"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "exists": true,
+      "sha256": "53787ba8e2fb34a2c0f0c6eaede92bbe98f1996951cab1d994f041edecbc1a6c"
+    },
+    {
+      "path": "notebooks/evaluator_optimizer_loop.ipynb",
+      "exists": true,
+      "sha256": "c307bad6ef87f27383c084773dc6b5579dfd8d1db4f7190240af67fefee648ac"
+    },
+    {
+      "path": "notebooks/evaluator_optimizer_verified.ipynb",
+      "exists": true,
+      "sha256": "4cad9182d7f96e3b7c3d618dc144462d98d52b1db4f4ef01d749e9467444ec70"
+    },
+    {
+      "path": "data/sprints_learner_db.csv",
+      "exists": true,
+      "sha256": "09b2a48880e2d07b87222cd7b26ac13f8570ed94832a9007db7aa3d6ad1a5a46"
+    },
+    {
+      "path": "data/sprints_learner.db",
+      "exists": true,
+      "sha256": "1e24c43e4b83a38558166dfee2acfd9fafcfc3c35e0c1ca49c1f85f5a997d2b7"
+    },
+    {
+      "path": "docs/data_provenance.md",
+      "exists": true,
+      "sha256": "9a51875e7d50dcbfdec39923827752a21c303fd7586e538accd7534dd8fd4352"
+    },
+    {
+      "path": "submission/technical_report.pdf",
+      "exists": true,
+      "sha256": "d218295f5abac59be12d0b3c4fe3b0c66872f7705d790283ab4264363ca284b7"
+    },
+    {
+      "path": "submission/stakeholder_presentation.pptx",
+      "exists": true,
+      "sha256": "80b36167e23de940a1d6dbe2875bba48a6a235546d42db67d8aa0a5f09eb88b0"
+    },
+    {
+      "path": "submission/stakeholder_presentation.pdf",
+      "exists": true,
+      "sha256": "ff760827b79dd6977193ecb1ca02acb825ae40b6ca820f453870e8d40daf7a4e"
+    },
+    {
+      "path": "submission/sprints-ai-orchestrator-final.zip",
+      "exists": true,
+      "sha256": "b7bf8908db005675b4fa344b03f3037b8d8fc82586edaf1401e6ab6d3603c234"
+    },
+    {
+      "path": "submission/audit_manifest.json",
+      "exists": true,
+      "sha256": "34db3ab2d980db98996b3332cc107febe9e2a6fa7a6080c7a720ca8adfbb388c"
+    }
+  ],
+  "zip_unchanged": true,
+  "shareable_url": null,
+  "video": "PENDING",
+  "paid_requests": 0,
+  "business_waiting_observations": 0
+}

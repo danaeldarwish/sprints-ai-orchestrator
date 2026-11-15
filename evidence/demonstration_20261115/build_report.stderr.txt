@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\build_report_current.py", line 169, in <module>
+    if __name__=="__main__":main()
+                            ~~~~^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\build_report_current.py", line 81, in main
+    f"Six synthetic curriculum files produce {bench['ingest']['chunks']} chunks in the measured corpus. The maximum actual chunk size is {bench['ingest']['max_chunk_tokens']} cl100k_base tokens. Adjacent windows overlap by exactly 50 token positions; final windows may be shorter than 500. Unicode boundary checks prevent broken UTF-8. Missing exact tokenization raises an explicit error instead of silently estimating.",
+                                              ~~~~~^^^^^^^^^^
+KeyError: 'ingest'

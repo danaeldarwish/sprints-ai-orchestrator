@@ -1,0 +1,9 @@
+{
+  "kind": "validation helper input framing error",
+  "result": {
+    "out": "",
+    "err": "Traceback (most recent call last):\r\n  File \"<string>\", line 15, in <module>\r\n    assert a.returncode==0 and set(a.stdout.splitlines())==set(ignored),(a.returncode,a.stdout,a.stderr)\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: (0, '\".env.private\\\\r\"\\n\".venv-test/Scripts/python.exe\\\\r\"\\n\".build/runtime\\\\r\"\\n\".chart-data-test/data.json\\\\r\"\\n\".chroma/index\\\\r\"\\n', '')\r\n",
+    "code": 1
+  },
+  "application_change": false
+}

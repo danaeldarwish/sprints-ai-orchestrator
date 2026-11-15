@@ -1,0 +1,10 @@
+{
+  "command": [
+    "wsl.exe",
+    "--list",
+    "--verbose"
+  ],
+  "at": "2026-11-15T05:20:13.288173+00:00",
+  "exit_code": 0,
+  "duration_s": 0.792
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+    "scripts/benchmark_rag.py"
+  ],
+  "cwd": ".",
+  "at": "2026-11-15T04:43:02.924732+00:00",
+  "exit_code": 1,
+  "timed_out": false,
+  "duration_s": 96.29
+}

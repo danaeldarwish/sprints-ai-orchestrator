@@ -1,0 +1,410 @@
+[
+  {
+    "case": 0,
+    "result": {
+      "status": "ok",
+      "stdout": "45\n",
+      "stderr": "",
+      "exit_code": 0,
+      "duration_ms": 7162.3,
+      "violations": []
+    },
+    "timeline": [
+      {
+        "operation": "info",
+        "duration_ms": 320.84,
+        "exit_code": 0
+      },
+      {
+        "operation": "image",
+        "duration_ms": 555.39,
+        "exit_code": 0
+      },
+      {
+        "operation": "create",
+        "duration_ms": 1798.38,
+        "exit_code": 0
+      },
+      {
+        "operation": "inspect",
+        "duration_ms": 429.3,
+        "exit_code": 0,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-15T05:47:09.296545616Z",
+          "FinishedAt": "2026-11-15T05:47:11.300572955Z"
+        }
+      },
+      {
+        "operation": "rm",
+        "duration_ms": 1454.84,
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "case": 1,
+    "result": {
+      "status": "ok",
+      "stdout": "45\n",
+      "stderr": "",
+      "exit_code": 0,
+      "duration_ms": 5986.4,
+      "violations": []
+    },
+    "timeline": [
+      {
+        "operation": "info",
+        "duration_ms": 445.25,
+        "exit_code": 0
+      },
+      {
+        "operation": "image",
+        "duration_ms": 455.06,
+        "exit_code": 0
+      },
+      {
+        "operation": "create",
+        "duration_ms": 1578.31,
+        "exit_code": 0
+      },
+      {
+        "operation": "inspect",
+        "duration_ms": 326.69,
+        "exit_code": 0,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-15T05:47:17.262542367Z",
+          "FinishedAt": "2026-11-15T05:47:18.734003817Z"
+        }
+      },
+      {
+        "operation": "rm",
+        "duration_ms": 934.53,
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "case": 2,
+    "result": {
+      "status": "ok",
+      "stdout": "45\n",
+      "stderr": "",
+      "exit_code": 0,
+      "duration_ms": 6276.6,
+      "violations": []
+    },
+    "timeline": [
+      {
+        "operation": "info",
+        "duration_ms": 1620.34,
+        "exit_code": 0
+      },
+      {
+        "operation": "image",
+        "duration_ms": 559.91,
+        "exit_code": 0
+      },
+      {
+        "operation": "create",
+        "duration_ms": 1671.25,
+        "exit_code": 0
+      },
+      {
+        "operation": "inspect",
+        "duration_ms": 303.46,
+        "exit_code": 0,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-15T05:47:25.740234497Z",
+          "FinishedAt": "2026-11-15T05:47:27.465539936Z"
+        }
+      },
+      {
+        "operation": "rm",
+        "duration_ms": 787.52,
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "case": 3,
+    "result": {
+      "status": "ok",
+      "stdout": "45\n",
+      "stderr": "",
+      "exit_code": 0,
+      "duration_ms": 6727.7,
+      "violations": []
+    },
+    "timeline": [
+      {
+        "operation": "info",
+        "duration_ms": 592.89,
+        "exit_code": 0
+      },
+      {
+        "operation": "image",
+        "duration_ms": 695.83,
+        "exit_code": 0
+      },
+      {
+        "operation": "create",
+        "duration_ms": 1644.96,
+        "exit_code": 0
+      },
+      {
+        "operation": "inspect",
+        "duration_ms": 327.35,
+        "exit_code": 0,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-15T05:47:33.616426903Z",
+          "FinishedAt": "2026-11-15T05:47:35.376491334Z"
+        }
+      },
+      {
+        "operation": "rm",
+        "duration_ms": 874.45,
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "case": 4,
+    "result": {
+      "status": "ok",
+      "stdout": "45\n",
+      "stderr": "",
+      "exit_code": 0,
+      "duration_ms": 7026.3,
+      "violations": []
+    },
+    "timeline": [
+      {
+        "operation": "info",
+        "duration_ms": 634.98,
+        "exit_code": 0
+      },
+      {
+        "operation": "image",
+        "duration_ms": 502.49,
+        "exit_code": 0
+      },
+      {
+        "operation": "create",
+        "duration_ms": 1772.73,
+        "exit_code": 0
+      },
+      {
+        "operation": "inspect",
+        "duration_ms": 399.8,
+        "exit_code": 0,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-15T05:47:41.000117308Z",
+          "FinishedAt": "2026-11-15T05:47:43.696553987Z"
+        }
+      },
+      {
+        "operation": "rm",
+        "duration_ms": 676.64,
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "case": 5,
+    "result": {
+      "status": "ok",
+      "stdout": "45\n",
+      "stderr": "",
+      "exit_code": 0,
+      "duration_ms": 8319.1,
+      "violations": []
+    },
+    "timeline": [
+      {
+        "operation": "info",
+        "duration_ms": 1208.35,
+        "exit_code": 0
+      },
+      {
+        "operation": "image",
+        "duration_ms": 336.06,
+        "exit_code": 0
+      },
+      {
+        "operation": "create",
+        "duration_ms": 1926.76,
+        "exit_code": 0
+      },
+      {
+        "operation": "inspect",
+        "duration_ms": 1057.45,
+        "exit_code": 0,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-15T05:47:49.946305668Z",
+          "FinishedAt": "2026-11-15T05:47:52.323212758Z"
+        }
+      },
+      {
+        "operation": "rm",
+        "duration_ms": 1069.31,
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "case": 6,
+    "result": {
+      "status": "ok",
+      "stdout": "45\n",
+      "stderr": "",
+      "exit_code": 0,
+      "duration_ms": 6341.3,
+      "violations": []
+    },
+    "timeline": [
+      {
+        "operation": "info",
+        "duration_ms": 589.52,
+        "exit_code": 0
+      },
+      {
+        "operation": "image",
+        "duration_ms": 542.36,
+        "exit_code": 0
+      },
+      {
+        "operation": "create",
+        "duration_ms": 1645.83,
+        "exit_code": 0
+      },
+      {
+        "operation": "inspect",
+        "duration_ms": 275.66,
+        "exit_code": 0,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-15T05:47:58.897316622Z",
+          "FinishedAt": "2026-11-15T05:48:00.574111707Z"
+        }
+      },
+      {
+        "operation": "rm",
+        "duration_ms": 963.69,
+        "exit_code": 0
+      }
+    ]
+  },
+  {
+    "case": 7,
+    "result": {
+      "status": "ok",
+      "stdout": "45\n",
+      "stderr": "",
+      "exit_code": 0,
+      "duration_ms": 5107.5,
+      "violations": []
+    },
+    "timeline": [
+      {
+        "operation": "info",
+        "duration_ms": 662.45,
+        "exit_code": 0
+      },
+      {
+        "operation": "image",
+        "duration_ms": 729.53,
+        "exit_code": 0
+      },
+      {
+        "operation": "create",
+        "duration_ms": 1436.18,
+        "exit_code": 0
+      },
+      {
+        "operation": "inspect",
+        "duration_ms": 315.24,
+        "exit_code": 0,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-15T05:48:06.443031295Z",
+          "FinishedAt": "2026-11-15T05:48:07.706820391Z"
+        }
+      },
+      {
+        "operation": "rm",
+        "duration_ms": 708.17,
+        "exit_code": 0
+      }
+    ]
+  }
+]

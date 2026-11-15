@@ -1,0 +1,178 @@
+{
+  "status": "READY",
+  "accepting_learner_requests": true,
+  "startup_ms": 2828.287,
+  "message": "Curriculum collection and preparation query succeeded.",
+  "error_type": null
+}
+OFFLINE DEMO: heuristic reasoner and scripted ReAct; no OpenAI inference.
+Python results require a verified Linux sandbox. Tier-1 stays pending.
+
+SCENARIO curriculum
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_retrieve
+sprints.trace    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+sprints.trace    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_reflect
+sprints.trace    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_reformulate
+sprints.trace    [advisor_reformulate] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_retrieve
+sprints.trace    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+sprints.trace    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_reflect
+sprints.trace    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_answer
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "answered",
+  "route": "advisor_curriculum",
+  "final_answer": "With MemorySaver, each conversation is stored under a thread ID passed in the run configuration. The trusted application allocates an opaque thread ID for each authenticated mock learner. MemorySaver keeps data in process memory; production systems use a database-backed checkpointer such as SQLite or Postgres so state survives restarts.\n\nSources: 05_memory_human_in_the_loop_and_safety.md",
+  "turn_count": 1,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 2,
+  "sources": [
+    "02_langchain_prompts_parsers_and_tools.md",
+    "04_langgraph_orchestration.md",
+    "05_memory_human_in_the_loop_and_safety.md"
+  ]
+}
+
+SCENARIO buggy_code
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_run
+sprints.repl sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T13:52:11.069727576Z finished=2026-11-15T13:52:12.817656648Z
+sprints.trace    [assessor_run] AIMessage[assessor] tool_call: execute_python
+sprints.trace    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_grade
+sprints.trace    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_judge
+sprints.trace    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_finalize
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "graded",
+  "route": "assessor",
+  "final_answer": "Score: 60/100 - FAIL (pass mark 70)\n- Passed 3/6 tests (correctness 35/70).\n- Test failed for input ([80, None, 90],): expected 85.0, got 56.67.\n- Test failed for input ([],): expected 0.0, got ZeroDivisionError: division by zero.\n- Readability: add a docstring explaining what the code does (-5).",
+  "turn_count": 1,
+  "assessment": {
+    "score": 60,
+    "feedback_points": [
+      "Passed 3/6 tests (correctness 35/70).",
+      "Test failed for input ([80, None, 90],): expected 85.0, got 56.67.",
+      "Test failed for input ([],): expected 0.0, got ZeroDivisionError: division by zero.",
+      "Readability: add a docstring explaining what the code does (-5)."
+    ],
+    "pass_status": "fail"
+  },
+  "refinement_count": 0,
+  "grader_calls": 1,
+  "needs_human_review": false,
+  "retrieval_attempts": 0
+}
+
+SCENARIO corrected_code
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_run
+sprints.repl sandbox_result status=ok exit_code=0 oom=False started=2026-11-15T13:52:19.762112631Z finished=2026-11-15T13:52:21.323336423Z
+sprints.trace    [assessor_run] AIMessage[assessor] tool_call: execute_python
+sprints.trace    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_grade
+sprints.trace    [assessor_grade] AIMessage[assessor]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_judge
+sprints.trace    [assessor_judge] AIMessage[judge]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_finalize
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "graded",
+  "route": "assessor",
+  "final_answer": "Score: 100/100 - PASS (pass mark 70)\n- Passed 6/6 tests (correctness 70/70).\n- All tests passed and the code is clean and readable. Excellent work.",
+  "turn_count": 2,
+  "assessment": {
+    "score": 100,
+    "feedback_points": [
+      "Passed 6/6 tests (correctness 70/70).",
+      "All tests passed and the code is clean and readable. Excellent work."
+    ],
+    "pass_status": "pass"
+  },
+  "refinement_count": 0,
+  "grader_calls": 1,
+  "needs_human_review": false,
+  "retrieval_attempts": 0
+}
+
+SCENARIO database_career
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_career
+sprints.trace    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+sprints.trace    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+sprints.trace    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage: content omitted from metadata trace
+sprints.trace ▶ node=career_recommend
+sprints.trace    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=hitl_gate
+sprints.trace ▶ node=career_finalize
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "released",
+  "route": "advisor_career",
+  "final_answer": "Placement review for Karim Hassan (Frontend): 15 modules, Python score 88, target 15,000 EGP per month.\nEligible openings:\n- Swvl: Frontend Engineer (OPN-SWVL-F), salary band 9,900-18,000 EGP\nThese results come from your Sprints records. They are not a job offer.\nPartner openings are synthetic POC seed data.",
+  "turn_count": 1,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 0
+}
+
+SCENARIO tier1_pending
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_career
+sprints.trace    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+sprints.trace    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+sprints.trace    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage: content omitted from metadata trace
+sprints.trace ▶ node=career_recommend
+sprints.trace    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=hitl_gate
+{
+  "status": "pending_human_review",
+  "route": "advisor_career",
+  "pending_id": "67767d1957916d4b79eede4c348de87db59d4eebdb14e9e6",
+  "final_answer": "Your placement recommendation is pending an authorized human review.",
+  "turn_count": 1
+}
+
+SCENARIO other_learner_denied
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "denied",
+  "route": "deny",
+  "final_answer": "I can only access your own Sprints record (SPR-1003). I can't share information about other learners.",
+  "turn_count": 2,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 0
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "ignored_examples": [
+    ".env",
+    ".env.private",
+    ".venv-test/Scripts/python.exe",
+    ".build/runtime",
+    ".chart-data-test/data.json",
+    ".chroma/index",
+    "submission/release.zip",
+    "submission/demo_walkthrough.mp4",
+    "data/test.db-wal",
+    "credentials.json"
+  ],
+  "included_examples": [
+    ".env.example",
+    "src/main.py",
+    "tests/test_graph.py",
+    "data/sprints_learner.db",
+    "evidence/baseline/original_source.zip",
+    "notebooks/evaluator_optimizer_verified.ipynb",
+    "submission/technical_report_current.pdf"
+  ],
+  "method": "git check-ignore --no-index in a temporary empty local repository; no project Git metadata or remote created"
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "-NoProfile",
+    "-NonInteractive",
+    "-Command",
+    "Get-Process | Where-Object {$_.ProcessName -match 'docker|wsl'} | Select-Object ProcessName,Id; Get-Service -Name com.docker.service -ErrorAction SilentlyContinue | Select-Object Name,Status"
+  ],
+  "at": "2026-11-15T05:18:59.548Z",
+  "duration_ms": 18800,
+  "exit_code": 0,
+  "killed": false
+}

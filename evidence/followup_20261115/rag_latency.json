@@ -1,0 +1,5637 @@
+{
+  "backend": "Actual ChromaDB PersistentClient; local 1024-dimensional hashing embeddings",
+  "method": "Nearest-rank; 20 alternating fresh-process pairs on same persisted corpus; OS caches not flushed; no outliers excluded; 30 s observation window prevents censoring over-1000 ms queries; warm 200 queries; all include embedding/executor dispatch/source attribution checks. Desktop load not controlled. Readiness is additional startup work, not removed cold cost.",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "source_sha256": "24b965a6e8622f8f3825021ac028ec74354817eb60964c35fc2336e2686eb8f3",
+  "proof": {
+    "ingest": {
+      "documents": 6,
+      "chunks": 8,
+      "max_chunk_tokens": 500,
+      "chunk_tokens": 500,
+      "chunk_overlap": 50,
+      "tokenizer": "tiktoken:cl100k_base",
+      "seconds": 1.414
+    },
+    "token_windows": [
+      {
+        "source": "01_python_foundations_and_grading.md",
+        "chunk_index": 0,
+        "tokens": 500,
+        "token_start": 0,
+        "token_end": 500,
+        "overlap_tokens": 0,
+        "recount": 500
+      },
+      {
+        "source": "01_python_foundations_and_grading.md",
+        "chunk_index": 1,
+        "tokens": 130,
+        "token_start": 450,
+        "token_end": 580,
+        "overlap_tokens": 50,
+        "recount": 130
+      },
+      {
+        "source": "02_langchain_prompts_parsers_and_tools.md",
+        "chunk_index": 0,
+        "tokens": 443,
+        "token_start": 0,
+        "token_end": 443,
+        "overlap_tokens": 0,
+        "recount": 443
+      },
+      {
+        "source": "03_rag_with_chromadb.md",
+        "chunk_index": 0,
+        "tokens": 461,
+        "token_start": 0,
+        "token_end": 461,
+        "overlap_tokens": 0,
+        "recount": 461
+      },
+      {
+        "source": "04_langgraph_orchestration.md",
+        "chunk_index": 0,
+        "tokens": 375,
+        "token_start": 0,
+        "token_end": 375,
+        "overlap_tokens": 0,
+        "recount": 375
+      },
+      {
+        "source": "05_memory_human_in_the_loop_and_safety.md",
+        "chunk_index": 0,
+        "tokens": 500,
+        "token_start": 0,
+        "token_end": 500,
+        "overlap_tokens": 0,
+        "recount": 500
+      },
+      {
+        "source": "05_memory_human_in_the_loop_and_safety.md",
+        "chunk_index": 1,
+        "tokens": 60,
+        "token_start": 450,
+        "token_end": 510,
+        "overlap_tokens": 50,
+        "recount": 60
+      },
+      {
+        "source": "06_career_services_policy.md",
+        "chunk_index": 0,
+        "tokens": 328,
+        "token_start": 0,
+        "token_end": 328,
+        "overlap_tokens": 0,
+        "recount": 328
+      }
+    ],
+    "corpus_sha256": {
+      "01_python_foundations_and_grading.md": "65c321ba430cb52dc8893a1129aff67ae5ab78657247e35eb350bac41574046a",
+      "02_langchain_prompts_parsers_and_tools.md": "a3b45e094f0e8a0e01b8a8682f4d9236834aa5b0dc947af0618d8bc7a5f60748",
+      "03_rag_with_chromadb.md": "83635d1a71f3ba5b7de31941cc1c54a9518618630f088cd0463e921330c0fa53",
+      "04_langgraph_orchestration.md": "47cfab8f92e30232b2050f7edd07cc89db2327e6b9400d83fce5d65f93b3277b",
+      "05_memory_human_in_the_loop_and_safety.md": "6f5f2425aa11b0aa7d916ae2e5780d9993594b6b2fe479f1e7bc67e69eeae9d4",
+      "06_career_services_policy.md": "110e8862b19eaee0d9898dd859751849e01ea83b7c3068bb0ebe1d8ccfa5b4e8"
+    }
+  },
+  "cold_process": {
+    "n": 20,
+    "p50_ms": 9307.468,
+    "p95_ms": 14760.504,
+    "p99_ms": 15508.491,
+    "max_ms": 15508.491,
+    "below_1000ms_pct": 0.0
+  },
+  "cold_first_retrieve": {
+    "n": 20,
+    "p50_ms": 483.953,
+    "p95_ms": 1591.568,
+    "p99_ms": 1593.507,
+    "max_ms": 1593.507,
+    "below_1000ms_pct": 85.0
+  },
+  "startup_readiness": {
+    "n": 20,
+    "p50_ms": 674.092,
+    "p95_ms": 1913.966,
+    "p99_ms": 3216.537,
+    "max_ms": 3216.537,
+    "below_1000ms_pct": 65.0
+  },
+  "first_after_readiness": {
+    "n": 20,
+    "p50_ms": 8.48,
+    "p95_ms": 13.129,
+    "p99_ms": 36.962,
+    "max_ms": 36.962,
+    "below_1000ms_pct": 100.0
+  },
+  "warm": {
+    "n": 200,
+    "p50_ms": 8.338,
+    "p95_ms": 16.128,
+    "p99_ms": 36.929,
+    "max_ms": 65.852,
+    "below_1000ms_pct": 100.0
+  },
+  "cold_samples": [
+    {
+      "import_ms": 11317.3554999521,
+      "query": "python rubric",
+      "latency_ms": 1591.5676000295207,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ],
+      "process_ms": 14760.504300007597
+    },
+    {
+      "import_ms": 5296.16970004281,
+      "query": "chroma chunk overlap",
+      "latency_ms": 483.95279998658225,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ]
+      ],
+      "process_ms": 6689.009399968199
+    },
+    {
+      "import_ms": 4729.016600002069,
+      "query": "langgraph state",
+      "latency_ms": 472.63929998734966,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ],
+      "process_ms": 6738.635499961674
+    },
+    {
+      "import_ms": 7715.061499970034,
+      "query": "interrupt approval",
+      "latency_ms": 466.39980003237724,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ],
+      "process_ms": 9307.467700040434
+    },
+    {
+      "import_ms": 10352.160799957346,
+      "query": "memory thread id",
+      "latency_ms": 476.0823000106029,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ],
+      "process_ms": 13065.71910000639
+    },
+    {
+      "import_ms": 6186.24120001914,
+      "query": "python rubric",
+      "latency_ms": 346.65949997724965,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ],
+      "process_ms": 7517.10820000153
+    },
+    {
+      "import_ms": 11322.799700021278,
+      "query": "chroma chunk overlap",
+      "latency_ms": 675.5401000264101,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ]
+      ],
+      "process_ms": 13649.65590002248
+    },
+    {
+      "import_ms": 5032.24929998396,
+      "query": "langgraph state",
+      "latency_ms": 716.7627000017092,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ]
+      ],
+      "process_ms": 6528.314700000919
+    },
+    {
+      "import_ms": 4778.119799972046,
+      "query": "interrupt approval",
+      "latency_ms": 349.5711000286974,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ],
+      "process_ms": 6212.6394000370055
+    },
+    {
+      "import_ms": 6403.272100025788,
+      "query": "memory thread id",
+      "latency_ms": 496.98760005412623,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ],
+      "process_ms": 7995.210599969141
+    },
+    {
+      "import_ms": 9844.473300036043,
+      "query": "python rubric",
+      "latency_ms": 1398.2163000036962,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ],
+      "process_ms": 13661.22179996455
+    },
+    {
+      "import_ms": 11529.008899990004,
+      "query": "chroma chunk overlap",
+      "latency_ms": 950.4977000178769,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ],
+      "process_ms": 13907.90620003827
+    },
+    {
+      "import_ms": 5482.280600001104,
+      "query": "langgraph state",
+      "latency_ms": 427.93299996992573,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ],
+      "process_ms": 6941.0692999954335
+    },
+    {
+      "import_ms": 6477.0361999981105,
+      "query": "interrupt approval",
+      "latency_ms": 413.6358000105247,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ],
+      "process_ms": 8205.227200000081
+    },
+    {
+      "import_ms": 9241.485300008208,
+      "query": "memory thread id",
+      "latency_ms": 1593.5069000115618,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ],
+      "process_ms": 12683.445199974813
+    },
+    {
+      "import_ms": 13747.623200004455,
+      "query": "python rubric",
+      "latency_ms": 961.6036000079475,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ],
+      "process_ms": 15508.490600041114
+    },
+    {
+      "import_ms": 12109.915999986697,
+      "query": "chroma chunk overlap",
+      "latency_ms": 634.5172000001185,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ]
+      ],
+      "process_ms": 14100.603999977466
+    },
+    {
+      "import_ms": 12291.13560001133,
+      "query": "langgraph state",
+      "latency_ms": 836.5746000199579,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ],
+      "process_ms": 14145.099299959838
+    },
+    {
+      "import_ms": 4038.1036999751814,
+      "query": "interrupt approval",
+      "latency_ms": 399.91190005093813,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ],
+      "process_ms": 5585.792400001083
+    },
+    {
+      "import_ms": 7042.978500016034,
+      "query": "memory thread id",
+      "latency_ms": 476.51930002029985,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ],
+      "process_ms": 9520.145599963143
+    }
+  ],
+  "prepared_samples": [
+    {
+      "import_ms": 9992.089400009718,
+      "readiness_ms": 511.2395000178367,
+      "query": "python rubric",
+      "latency_ms": 6.0685999924317,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ],
+      "process_ms": 12392.739799979609
+    },
+    {
+      "import_ms": 12798.900299996603,
+      "readiness_ms": 582.4381999555044,
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.48049996420741,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ]
+      ],
+      "process_ms": 14295.496100035962
+    },
+    {
+      "import_ms": 11351.951999997254,
+      "readiness_ms": 1009.070799977053,
+      "query": "langgraph state",
+      "latency_ms": 9.98889998300001,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ],
+      "process_ms": 14158.74529996654
+    },
+    {
+      "import_ms": 8865.107899997383,
+      "readiness_ms": 1389.4712000037543,
+      "query": "interrupt approval",
+      "latency_ms": 9.185599978081882,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ],
+      "process_ms": 11892.225600022357
+    },
+    {
+      "import_ms": 6679.493299976457,
+      "readiness_ms": 783.6570999934338,
+      "query": "memory thread id",
+      "latency_ms": 6.925599998794496,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ],
+      "process_ms": 8703.811099985614
+    },
+    {
+      "import_ms": 3976.804399979301,
+      "readiness_ms": 739.4140999531373,
+      "query": "python rubric",
+      "latency_ms": 11.161299946252257,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ],
+      "process_ms": 6219.625300029293
+    },
+    {
+      "import_ms": 4857.287199993152,
+      "readiness_ms": 418.5095999855548,
+      "query": "chroma chunk overlap",
+      "latency_ms": 6.362199957948178,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ]
+      ],
+      "process_ms": 6229.60379999131
+    },
+    {
+      "import_ms": 10616.803799988702,
+      "readiness_ms": 1859.569999971427,
+      "query": "langgraph state",
+      "latency_ms": 12.343999987933785,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ]
+      ],
+      "process_ms": 13883.28869995894
+    },
+    {
+      "import_ms": 10841.437600029167,
+      "readiness_ms": 1913.9664000249468,
+      "query": "interrupt approval",
+      "latency_ms": 13.129400031175464,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ],
+      "process_ms": 14323.884900019038
+    },
+    {
+      "import_ms": 4319.398700026795,
+      "readiness_ms": 408.09510002145544,
+      "query": "memory thread id",
+      "latency_ms": 4.570199991576374,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ],
+      "process_ms": 5583.966700010933
+    },
+    {
+      "import_ms": 11855.284399993252,
+      "readiness_ms": 1078.7797999801114,
+      "query": "python rubric",
+      "latency_ms": 12.1254000114277,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ],
+      "process_ms": 15454.144099960104
+    },
+    {
+      "import_ms": 7768.144900037441,
+      "readiness_ms": 686.5910000051372,
+      "query": "chroma chunk overlap",
+      "latency_ms": 11.69290003599599,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ]
+      ],
+      "process_ms": 9975.948800041806
+    },
+    {
+      "import_ms": 12550.569600018207,
+      "readiness_ms": 3216.53699997114,
+      "query": "langgraph state",
+      "latency_ms": 36.96150000905618,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ]
+      ],
+      "process_ms": 17865.735700004734
+    },
+    {
+      "import_ms": 5134.936300048139,
+      "readiness_ms": 434.6707999939099,
+      "query": "interrupt approval",
+      "latency_ms": 6.278800021391362,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ],
+      "process_ms": 6470.897800056264
+    },
+    {
+      "import_ms": 5101.067100011278,
+      "readiness_ms": 395.25489998050034,
+      "query": "memory thread id",
+      "latency_ms": 6.457599985878915,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ],
+      "process_ms": 7191.710399987642
+    },
+    {
+      "import_ms": 3924.880700011272,
+      "readiness_ms": 554.6026999945752,
+      "query": "python rubric",
+      "latency_ms": 6.6223000176250935,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ],
+      "process_ms": 5445.151399995666
+    },
+    {
+      "import_ms": 4686.373100033961,
+      "readiness_ms": 562.2867000056431,
+      "query": "chroma chunk overlap",
+      "latency_ms": 11.090199986938387,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ]
+      ],
+      "process_ms": 6359.445299953222
+    },
+    {
+      "import_ms": 6127.497399982531,
+      "readiness_ms": 674.0920000011101,
+      "query": "langgraph state",
+      "latency_ms": 5.080300034023821,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ]
+      ],
+      "process_ms": 7889.694500016049
+    },
+    {
+      "import_ms": 9295.409900019877,
+      "readiness_ms": 1146.7453999794088,
+      "query": "interrupt approval",
+      "latency_ms": 8.879600034561008,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ],
+      "process_ms": 11830.444899969734
+    },
+    {
+      "import_ms": 4135.5506999534555,
+      "readiness_ms": 519.4198999670334,
+      "query": "memory thread id",
+      "latency_ms": 6.512199994176626,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ],
+      "process_ms": 5601.870200014673
+    }
+  ],
+  "warm_samples": [
+    {
+      "query": "python rubric",
+      "latency_ms": 5.3746000048704445,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 5.514300020877272,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 5.463000037707388,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 5.7907000300474465,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 4.911500029265881,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 5.116800020914525,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 4.994599963538349,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 6.173699977807701,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 5.635800014715642,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 4.451400018297136,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 5.931299994699657,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 5.688800010830164,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 5.498399958014488,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 5.438399966806173,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 5.318200041074306,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 4.625300003681332,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 4.384299973025918,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 6.060299987439066,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 4.89659997401759,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 5.7221000315621495,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 4.85520000802353,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 6.559500005096197,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 5.82859996939078,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 5.664799944497645,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 6.139600009191781,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 5.701499991118908,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 5.738100036978722,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 5.7551999925635755,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 6.514100008644164,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 6.134899973403662,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 6.127400032710284,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.171699999365956,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 6.958200014196336,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 12.999100028537214,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 65.85169996833429,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 32.87070000078529,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 36.9291000533849,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 14.470499998424202,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 15.941500023473054,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 27.322500012815,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 10.219299991149455,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.068000024650246,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 9.43189999088645,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 9.080499992705882,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.902699988335371,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.234000008087605,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.980799990240484,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 7.9685000237077475,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.810799976345152,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 11.164999974425882,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 9.324899991042912,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.744700007606298,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 10.9226000495255,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 7.405599986668676,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 11.406100005842745,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.750899985898286,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.560800004284829,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 9.170199977234006,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.477900002617389,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.016499992460012,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 9.495000005699694,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 12.780899996869266,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 10.683100030291826,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 7.860500016249716,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.99319997895509,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 9.485100046731532,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.58160003554076,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 9.054899972397834,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 10.587400000076741,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 9.483499976340681,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 7.87919998401776,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 11.57140004215762,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 9.441500005777925,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 9.497400023974478,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 9.48949996381998,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 7.99770001322031,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 9.58289997652173,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 9.86310001462698,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.526199962943792,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 9.248699992895126,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.958599995821714,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 9.71630000276491,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 7.319600030314177,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 7.9347999999299645,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 8.44970002071932,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.188000007066876,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.42590002482757,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 9.400599985383451,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.155399991665035,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 8.00080003682524,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 7.990399957634509,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.959800015669316,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 7.782400003634393,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 7.951400009915233,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 8.02730000577867,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 9.214599966071546,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.853400020394474,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 7.560199999716133,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.1221999716945,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.041500008199364,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 7.895299990195781,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.898899959400296,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 7.638499955646694,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.37400002637878,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 8.463200007099658,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.124499989207834,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 9.39050002489239,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 8.857599983457476,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 14.413799974136055,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 12.388799979817122,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.666699985042214,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.337899984326214,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 14.283499971497804,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 15.017199970316142,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 36.08330001588911,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 12.617699976544827,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 15.744599979370832,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 10.018000029958785,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.106999972369522,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 29.797700000926852,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 13.60260002547875,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 10.477999981958419,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 8.55040003079921,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 7.724599970970303,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 9.582700033206493,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 15.571799944154918,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 9.219100000336766,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 14.091699966229498,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 9.68379998812452,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.778899976983666,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 9.232400043401867,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.939000021200627,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 8.43779998831451,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 10.224099969491363,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 8.028600015677512,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 7.855700037907809,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 13.290699978824705,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 11.281499988399446,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 9.269399975892156,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 9.236200014129281,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.655200013890862,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.641500036697835,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 9.075800015125424,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.965799992438406,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 8.278199995402247,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.402700012084097,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 9.520300023723394,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 11.856600001920015,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.4138999809511,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 8.55050003156066,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.482699980959296,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.667600002605468,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 7.841299986466765,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 7.733799982815981,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.656999980099499,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 7.666899997275323,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.621099997777492,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 7.085999997798353,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.607600000686944,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.86579999839887,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 6.965299951843917,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.127800014335662,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 6.7183999926783144,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.006500022020191,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.789199997205287,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 6.985600048210472,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.093299984466285,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 8.706499997060746,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.69570003123954,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.994100044015795,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 7.23909999942407,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.29270004760474,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 7.2200000286102295,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 8.697199984453619,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 8.509900013450533,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.463100006338209,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 7.665699988137931,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 10.865199961699545,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 7.847299973946065,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.074299966916442,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 7.918199989944696,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.193499990738928,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 7.13980000000447,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 9.15639998856932,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 7.978799985721707,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 8.325900009367615,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 8.845600008498877,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 10.554499982390553,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 7.66579998889938,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 9.662600001320243,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 19.378600001800805,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 57.54299997352064,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 14.856999972835183,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 18.73040001373738,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 16.127700044307858,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "python rubric",
+      "latency_ms": 20.448399998713285,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "chroma chunk overlap",
+      "latency_ms": 10.666700021829456,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "langgraph state",
+      "latency_ms": 10.2201999980025,
+      "sources": [
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "interrupt approval",
+      "latency_ms": 9.011899994220585,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "memory thread id",
+      "latency_ms": 11.948300001677126,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    }
+  ],
+  "quality": [
+    {
+      "query": "How is a Python assignment scored?",
+      "latency_ms": 5.709599994588643,
+      "sources": [
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          0
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "what chunk size and overlap does ingestion use",
+      "latency_ms": 6.086600013077259,
+      "sources": [
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ],
+        [
+          "01_python_foundations_and_grading.md",
+          1
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "how do I pause the graph for a human reviewer interrupt",
+      "latency_ms": 5.942500021774322,
+      "sources": [
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "which partner is tier-1 and needs approval",
+      "latency_ms": 4.8893000348471105,
+      "sources": [
+        [
+          "06_career_services_policy.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "03_rag_with_chromadb.md",
+          0
+        ]
+      ]
+    },
+    {
+      "query": "what is a ReAct agent tool message",
+      "latency_ms": 5.8379999827593565,
+      "sources": [
+        [
+          "02_langchain_prompts_parsers_and_tools.md",
+          0
+        ],
+        [
+          "04_langgraph_orchestration.md",
+          0
+        ],
+        [
+          "05_memory_human_in_the_loop_and_safety.md",
+          1
+        ],
+        [
+          "06_career_services_policy.md",
+          0
+        ]
+      ]
+    }
+  ]
+}

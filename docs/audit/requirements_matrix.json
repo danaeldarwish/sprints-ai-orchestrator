@@ -1,0 +1,400 @@
+{
+  "source_basis": "User working assignment/discovery/rubric transcriptions, not original media",
+  "functional": [
+    {
+      "id": "F1",
+      "requirement": "500-token Chroma ingestion, 50-token overlap",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/tools/rag_retriever.py:125",
+      "execution_evidence": "tests/test_rag.py; tests/test_security_regressions.py::test_exact_overlap_offsets_and_reencoded_token_sequences; evidence/benchmark/rag_latency.json",
+      "limits": "Actual Chroma, exact cl100k_base; embeddings are deterministic hashing."
+    },
+    {
+      "id": "F2",
+      "requirement": "Pydantic score, feedback_points, pass_status",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/schemas.py:13",
+      "execution_evidence": "tests/test_schemas_and_prompts.py; evidence/tests.xml",
+      "limits": "Schema/parser tests and mock execution fixtures; live model grading unverified."
+    },
+    {
+      "id": "F3",
+      "requirement": "SQL learner progress, EGP target, employers",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/tools/db_queries.py:100",
+      "execution_evidence": "tests/test_sql_tool.py; evidence/evaluation/scenarios.json",
+      "limits": "Actual SQLite rows; partner openings synthetic."
+    },
+    {
+      "id": "F4",
+      "requirement": "Secure isolated Python execution",
+      "baseline": "FAIL",
+      "final": "PARTIAL",
+      "code": "src/tools/code_repl.py:144",
+      "execution_evidence": "evidence/evaluation/scenarios.json; tests/test_sandbox.py; evidence/tests.xml",
+      "limits": "Host fallback removed. Linux Docker unavailable; 14 actual integration cases skipped. Kernel containment NOT VERIFIED."
+    },
+    {
+      "id": "F5",
+      "requirement": "Unified TypedDict StateGraph, Advisor/Assessor routing",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/agents/orchestrator.py:109",
+      "execution_evidence": "tests/test_graph.py::test_routes_curriculum_career_grading; evidence/evaluation/scenarios.json",
+      "limits": "Real LangGraph execution with offline reasoning."
+    },
+    {
+      "id": "F6",
+      "requirement": "MemorySaver and learner checkpoint isolation",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/service.py:38",
+      "execution_evidence": "tests/test_graph.py::test_memory_and_public_snapshot_are_owned; tests/test_security_regressions.py",
+      "limits": "Mock authenticated application context only; process-local persistence."
+    },
+    {
+      "id": "F7",
+      "requirement": "Agentic RAG critique, reformulation and retry",
+      "baseline": "PARTIAL",
+      "final": "PARTIAL",
+      "code": "src/agents/advisor_agent.py:56",
+      "execution_evidence": "tests/test_graph.py::test_rag_reflects_and_reformulates; evidence/evaluation/scenarios.json",
+      "limits": "Actual retrieval and bounded control flow; critique is heuristic offline. Genuine live LLM reflection NOT VERIFIED."
+    },
+    {
+      "id": "F8",
+      "requirement": "Assessor evaluator-optimizer with LLM-as-Judge",
+      "baseline": "PARTIAL",
+      "final": "PARTIAL",
+      "code": "src/agents/assessor_agent.py:59",
+      "execution_evidence": "tests/test_evaluator_optimizer.py; notebooks/evaluator_optimizer_loop.ipynb",
+      "limits": "Loop verified with declared execution fixtures and deterministic judge. Actual sandbox and live OpenAI judge NOT VERIFIED."
+    },
+    {
+      "id": "F9",
+      "requirement": "Tier-1 LangGraph interrupt and explicit authorized review",
+      "baseline": "FAIL",
+      "final": "PASS",
+      "code": "src/service.py:113",
+      "execution_evidence": "tests/test_graph.py; tests/test_security_regressions.py; evidence/evaluation/scenarios.json",
+      "limits": "Pending/approved/rejected transitions use mock reviewer sessions. Production identity and a real human recording remain unverified."
+    },
+    {
+      "id": "F10",
+      "requirement": "HumanMessage, AIMessage, ToolMessage and trace logs",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/protocol.py:20",
+      "execution_evidence": "tests/test_graph.py::test_protocol_pairs_and_metadata_trace; evidence/commands/default_demo.stdout.txt",
+      "limits": "Metadata-only trace excludes records and tokens."
+    }
+  ],
+  "acceptance": [
+    {
+      "id": "A1",
+      "requirement": "Use LangGraph orchestration",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/agents/orchestrator.py:3",
+      "execution_evidence": "evidence/tests.xml; evidence/evaluation/scenarios.json",
+      "limits": ""
+    },
+    {
+      "id": "A2",
+      "requirement": "Detailed Sprints-specific docstrings",
+      "baseline": "PASS",
+      "final": "PASS",
+      "code": "src/agents; src/tools; src/state.py; src/service.py",
+      "execution_evidence": "Source inspection; evidence/commands/syntax.json",
+      "limits": "Editorial review, not a claim that a style tool proved documentation quality."
+    },
+    {
+      "id": "A3",
+      "requirement": "Chroma retrieval below 1000 ms",
+      "baseline": "NOT VERIFIED",
+      "final": "PARTIAL",
+      "code": "src/tools/rag_retriever.py:221",
+      "execution_evidence": "evidence/benchmark/rag_latency.json",
+      "limits": "Warm samples pass; cold samples may fail. Process startup is separately measured. No universal latency guarantee."
+    },
+    {
+      "id": "A4",
+      "requirement": "SQL/Python failures return structured Unable to verify",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/schemas.py:UnableToVerify; src/agents/assessor_agent.py:assessor_run",
+      "execution_evidence": "tests/test_sql_tool.py; tests/test_graph.py; evidence/evaluation/scenarios.json",
+      "limits": ""
+    },
+    {
+      "id": "A5",
+      "requirement": "At most three optimizer refinements",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/agents/assessor_agent.py:104",
+      "execution_evidence": "tests/test_evaluator_optimizer.py::test_hard_maximum_three_refinements; executed notebook",
+      "limits": "Real graph cap; mock execution evidence, deterministic judge."
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "D1",
+      "requirement": "Reproducible GitHub-ready repository",
+      "baseline": "PARTIAL",
+      "final": "PARTIAL",
+      "code": "README.md; requirements.txt; requirements-lock.txt",
+      "execution_evidence": "evidence/commands/dependency_check.json; evidence/archive_verification.json",
+      "limits": "Offline reproduction only. No GitHub publication. Sandbox and paid inference require separate verification."
+    },
+    {
+      "id": "D2",
+      "requirement": "Complete technical report PDF",
+      "baseline": "FAIL",
+      "final": "PASS",
+      "code": "submission/technical_report.pdf",
+      "execution_evidence": "evidence/artifact_validation.json; evidence/render_review.md",
+      "limits": "Current limitations disclosed."
+    },
+    {
+      "id": "D3",
+      "requirement": "8-10 slide presentation in PPTX and PDF",
+      "baseline": "FAIL",
+      "final": "PASS",
+      "code": "submission/stakeholder_presentation.pptx; submission/stakeholder_presentation.pdf",
+      "execution_evidence": "evidence/artifact_validation.json; evidence/presentation_validation.json; evidence/render_review.md",
+      "limits": "10 slides; no original kickoff template available."
+    },
+    {
+      "id": "D4",
+      "requirement": "Genuine 3-5 minute recorded demo",
+      "baseline": "FAIL",
+      "final": "FAIL",
+      "code": "docs/demo_recording_script.md",
+      "execution_evidence": "No MP4 exists; duration NOT VERIFIED",
+      "limits": "Video PENDING. Exact 4:15 script is not a recorded video."
+    },
+    {
+      "id": "D5",
+      "requirement": "Executed assessor evaluation notebook",
+      "baseline": "PARTIAL",
+      "final": "PARTIAL",
+      "code": "notebooks/evaluator_optimizer_loop.ipynb",
+      "execution_evidence": "evidence/commands/notebook_execute.json",
+      "limits": "4 code cells executed, zero errors; actual sandbox path unavailable and optimization examples explicitly use fixtures."
+    },
+    {
+      "id": "D6",
+      "requirement": "Final package and audit manifest",
+      "baseline": "FAIL",
+      "final": "PASS",
+      "code": "submission/sprints-ai-orchestrator-final.zip; submission/audit_manifest.json",
+      "execution_evidence": "evidence/archive_verification.json",
+      "limits": "See final gate and source hashes."
+    },
+    {
+      "id": "D7",
+      "requirement": "Supplied learner data and documented SQLite",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "data/sprints_learner_db.csv; data/sprints_learner.db; docs/data_provenance.md",
+      "execution_evidence": "evidence/baseline/archive_manifest.json; evidence/quality_gate.json",
+      "limits": "25 learner records unchanged; 16 synthetic openings. No 500-record expansion."
+    }
+  ],
+  "source_and_discovery": [
+    {
+      "id": "K1",
+      "requirement": "Original kickoff PPTX content cross-check",
+      "baseline": "NOT VERIFIED",
+      "final": "NOT VERIFIED",
+      "code": "_client_sources/README.md",
+      "execution_evidence": "User clarified original PPTX absent",
+      "limits": "Working notes cannot prove full deck fidelity."
+    },
+    {
+      "id": "K2",
+      "requirement": "Kickoff mentions 500 learners",
+      "baseline": "NOT VERIFIED",
+      "final": "NOT VERIFIED",
+      "code": "_client_sources/README.md; docs/data_provenance.md",
+      "execution_evidence": "25 CSV rows counted; original kickoff absent",
+      "limits": "500 remains an attributed independent finding, not independently verified media content."
+    },
+    {
+      "id": "K3",
+      "requirement": "Original discovery MP3 and full transcript cross-check",
+      "baseline": "NOT VERIFIED",
+      "final": "NOT VERIFIED",
+      "code": "_client_sources/client_discovery_call_transcript.md",
+      "execution_evidence": "User-supplied working summary only",
+      "limits": "Original MP3 and verbatim full transcript unavailable."
+    },
+    {
+      "id": "S1",
+      "requirement": "80% waiting-time reduction target, honest measurement",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "docs/business_metrics.md",
+      "execution_evidence": "No business event baseline; evaluation n=0",
+      "limits": "Target captured; achieved reduction NOT VERIFIED."
+    },
+    {
+      "id": "S2",
+      "requirement": "Mandatory typed state and per-learner checkpoints",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/state.py; src/service.py",
+      "execution_evidence": "evidence/tests.xml",
+      "limits": ""
+    },
+    {
+      "id": "S3",
+      "requirement": "Secure grading required by discovery",
+      "baseline": "FAIL",
+      "final": "PARTIAL",
+      "code": "src/tools/code_repl.py",
+      "execution_evidence": "14 actual sandbox cases skipped",
+      "limits": "Containment unavailable; fail closed demonstrated."
+    },
+    {
+      "id": "S4",
+      "requirement": "Prevent invented qualifications and wrong matches",
+      "baseline": "PARTIAL",
+      "final": "PASS",
+      "code": "src/agents/advisor_agent.py:build_career_message; src/tools/db_queries.py:evaluate_openings",
+      "execution_evidence": "tests/test_graph.py::test_grounding_rejects_invented_partner_salary_opening; tests/test_sql_tool.py",
+      "limits": "Deterministic row-derived POC policy; real partner-policy validity unverified."
+    },
+    {
+      "id": "S5",
+      "requirement": "Live Q&A, isolated grading and DB matching demo",
+      "baseline": "PARTIAL",
+      "final": "PARTIAL",
+      "code": "src/main.py; docs/demo_recording_script.md",
+      "execution_evidence": "evidence/commands/default_demo.stdout.txt; evidence/evaluation/scenarios.json",
+      "limits": "Q&A and matching actual offline; grading unavailable, video pending, live LLM absent."
+    }
+  ],
+  "independent_findings": [
+    [
+      "1",
+      "25 supplied records versus attributed kickoff 500",
+      "CONFIRMED 25; 500 NOT VERIFIED",
+      "CSV/hash check; original kickoff unavailable"
+    ],
+    [
+      "2",
+      "Locally generated SQLite, synthetic curriculum/openings",
+      "CONFIRMED",
+      "build_database seed rules; is_synthetic=1; synthetic Markdown labels"
+    ],
+    [
+      "3",
+      "Default heuristic/scripted models, no verified OpenAI run",
+      "CONFIRMED",
+      "src/config.py; src/llm.py; no live call made"
+    ],
+    [
+      "4",
+      "POSIX executor fails on Windows",
+      "CONFIRMED",
+      "baseline collection exit 4, ModuleNotFoundError: resource"
+    ],
+    [
+      "5",
+      "Noninteractive demo can auto-approve tier-1",
+      "CONFIRMED baseline; REMOVED",
+      "original src/main.py lambda default; new default leaves pending"
+    ],
+    [
+      "6",
+      "Unverified reviewer metadata/permissive resume",
+      "CONFIRMED baseline; FIXED in mock application scope",
+      "original hitl_gate accepts bool/default reviewer; strict service review now"
+    ],
+    [
+      "7",
+      "SQL tool lacks learner authorization",
+      "CONFIRMED baseline; FIXED at tool boundary",
+      "original run_readonly_sql accepts all SELECT; now disabled"
+    ],
+    [
+      "8",
+      "Learner-derived thread ID is not authentication",
+      "CONFIRMED baseline; FIXED in application scope",
+      "legacy thread_config disabled; sessions and opaque registry now"
+    ],
+    [
+      "9",
+      "Missing report/deck/video in baseline ZIP",
+      "CONFIRMED",
+      "original ZIP member manifest; report/deck now created; video still pending"
+    ],
+    [
+      "10",
+      "Saved textual demo is not a video",
+      "No baseline demo-text artifact independently found; no video found",
+      "Text and notebook outputs are not counted as a recording"
+    ],
+    [
+      "11",
+      "Latency claim lacks reproducible benchmark evidence",
+      "CONFIRMED baseline; NEW evidence added",
+      "old README claimed approx 1ms p95; old test warm only; raw cold/warm samples now"
+    ],
+    [
+      "12",
+      "80% waiting-time target",
+      "CONFIRMED by user working notes; original audio NOT VERIFIED",
+      "Original charter and new working notes; no achieved improvement claimed"
+    ]
+  ],
+  "rubric": [
+    {
+      "criterion": "Functional completeness",
+      "maximum": 35,
+      "estimate": 22,
+      "risk": "Sandbox and genuine LLM behavior unverified; RAG cold misses"
+    },
+    {
+      "criterion": "Quality and reproducibility",
+      "maximum": 20,
+      "estimate": 15,
+      "risk": "Offline evidence strong; production auth/persistence absent"
+    },
+    {
+      "criterion": "Integration across both sprints",
+      "maximum": 15,
+      "estimate": 9,
+      "risk": "Real graph integration; grading/LLM path only partial"
+    },
+    {
+      "criterion": "Technical report PDF",
+      "maximum": 10,
+      "estimate": 9,
+      "risk": "Report describes current limitations; evaluator judgement varies"
+    },
+    {
+      "criterion": "Stakeholder presentation",
+      "maximum": 10,
+      "estimate": 9,
+      "risk": "10 slides delivered; original media unavailable"
+    },
+    {
+      "criterion": "Recorded demonstration",
+      "maximum": 10,
+      "estimate": 0,
+      "risk": "Video missing"
+    }
+  ],
+  "estimated_score": 64,
+  "estimate_range": [
+    50,
+    70
+  ],
+  "pass_score": 60,
+  "verdict": "NOT READY"
+}

@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-15T13:49:45.528127+00:00",
+  "command": [
+    "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.venv-audit\\Scripts\\python.exe",
+    "-m",
+    "src.main",
+    "ingest"
+  ],
+  "cwd": "C:\\Users\\sh\\OneDrive\\Documents\\sprint1_gp\\sprints-ai-orchestrator\\sprints-ai-orchestrator\\.build\\publish-20261115T134906Z",
+  "exit_code": 0,
+  "duration_s": 10.771,
+  "mode": "offline/hashing; credential-free child environment"
+}

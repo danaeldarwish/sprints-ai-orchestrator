@@ -1,0 +1,4 @@
+WARNING: Error loading config file: open C:\Users\sh\.docker\config.json: Access is denied.
+docker: unknown command: docker desktop
+
+Run 'docker --help' for more information

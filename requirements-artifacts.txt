@@ -1,0 +1,4 @@
+# Artifact-only dependencies, separate from application execution.
+reportlab==5.1.0
+pypdf==7.1.0
+pymupdf==2.1

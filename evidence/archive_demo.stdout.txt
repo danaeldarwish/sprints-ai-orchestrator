@@ -1,0 +1,153 @@
+OFFLINE DEMO: heuristic reasoner and scripted ReAct; no OpenAI inference.
+Python results require a verified Linux sandbox. Tier-1 stays pending.
+
+SCENARIO curriculum
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_retrieve
+sprints.trace    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+sprints.trace    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_reflect
+sprints.trace    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_reformulate
+sprints.trace    [advisor_reformulate] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_retrieve
+sprints.trace    [advisor_retrieve] AIMessage[advisor] tool_call: search_curriculum
+sprints.trace    [advisor_retrieve] ToolMessage[search_curriculum]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_reflect
+sprints.trace    [advisor_reflect] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_answer
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "answered",
+  "route": "advisor_curriculum",
+  "final_answer": "With MemorySaver, each conversation is stored under a thread ID passed in the run configuration. The trusted application allocates an opaque thread ID for each authenticated mock learner. MemorySaver keeps data in process memory; production systems use a database-backed checkpointer such as SQLite or Postgres so state survives restarts.\n\nSources: 05_memory_human_in_the_loop_and_safety.md",
+  "turn_count": 1,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 2,
+  "sources": [
+    "02_langchain_prompts_parsers_and_tools.md",
+    "04_langgraph_orchestration.md",
+    "05_memory_human_in_the_loop_and_safety.md"
+  ]
+}
+
+SCENARIO buggy_code
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_run
+sprints.trace    [assessor_run] AIMessage[assessor] tool_call: execute_python
+sprints.trace    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "unable_to_verify",
+  "route": "assessor",
+  "final_answer": "Unable to verify: a verified isolated Python sandbox is unavailable (source: python_repl).",
+  "turn_count": 1,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 0,
+  "fallback": {
+    "status": "unable_to_verify",
+    "source": "python_repl",
+    "message": "Unable to verify"
+  }
+}
+
+SCENARIO corrected_code
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=assessor_run
+sprints.trace    [assessor_run] AIMessage[assessor] tool_call: execute_python
+sprints.trace    [assessor_run] ToolMessage[execute_python]: content omitted from metadata trace
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "unable_to_verify",
+  "route": "assessor",
+  "final_answer": "Unable to verify: a verified isolated Python sandbox is unavailable (source: python_repl).",
+  "turn_count": 2,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 0,
+  "fallback": {
+    "status": "unable_to_verify",
+    "source": "python_repl",
+    "message": "Unable to verify"
+  }
+}
+
+SCENARIO database_career
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_career
+sprints.trace    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+sprints.trace    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+sprints.trace    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage: content omitted from metadata trace
+sprints.trace ▶ node=career_recommend
+sprints.trace    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=hitl_gate
+sprints.trace ▶ node=career_finalize
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "released",
+  "route": "advisor_career",
+  "final_answer": "Placement review for Karim Hassan (Frontend): 15 modules, Python score 88, target 15,000 EGP per month.\nEligible openings:\n- Swvl: Frontend Engineer (OPN-SWVL-F), salary band 9,900-18,000 EGP\nThese results come from your Sprints records. They are not a job offer.\nPartner openings are synthetic POC seed data.",
+  "turn_count": 1,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 0
+}
+
+SCENARIO tier1_pending
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=advisor_career
+sprints.trace    [advisor_career] HumanMessage[advisor]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: get_learner_profile
+sprints.trace    [advisor_career] ToolMessage[get_learner_profile]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage[agent] tool_call: list_matching_openings
+sprints.trace    [advisor_career] ToolMessage[list_matching_openings]: content omitted from metadata trace
+sprints.trace    [advisor_career] AIMessage: content omitted from metadata trace
+sprints.trace ▶ node=career_recommend
+sprints.trace    [career_recommend] AIMessage[advisor]: content omitted from metadata trace
+sprints.trace ▶ node=hitl_gate
+{
+  "status": "pending_human_review",
+  "route": "advisor_career",
+  "pending_id": "9946cc2c9d9a7b4c0915c761b60a275bae15f8587733b181",
+  "final_answer": "Your placement recommendation is pending an authorized human review.",
+  "turn_count": 1
+}
+
+SCENARIO other_learner_denied
+sprints.trace ▶ node=orchestrator
+sprints.trace    [orchestrator] AIMessage[orchestrator]: content omitted from metadata trace
+sprints.trace ▶ node=finalize
+sprints.trace    [finalize] AIMessage[orchestrator]: content omitted from metadata trace
+{
+  "status": "denied",
+  "route": "deny",
+  "final_answer": "I can only access your own Sprints record (SPR-1003). I can't share information about other learners.",
+  "turn_count": 2,
+  "assessment": {},
+  "refinement_count": 0,
+  "grader_calls": 0,
+  "needs_human_review": false,
+  "retrieval_attempts": 0
+}

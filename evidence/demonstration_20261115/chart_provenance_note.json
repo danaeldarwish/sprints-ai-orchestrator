@@ -1,0 +1,13 @@
+{
+  "source": "evidence/followup_20261115/rag_latency.json",
+  "change": "Intentionally replaced imported literal chart with native editable chart at same placement, using measured p95 values. Import lost referenced workbook; no formula provenance invented.",
+  "values_ms": [
+    16.128,
+    1591.568
+  ],
+  "categories": [
+    "Warm query",
+    "Cold first query"
+  ],
+  "original_source_pptx_preserved": true
+}

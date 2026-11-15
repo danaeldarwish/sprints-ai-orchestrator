@@ -1,0 +1,95 @@
+Traceback (most recent call last):
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\traitlets\traitlets.py", line 652, in get
+    value = obj._trait_values[self.name]
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'ipython_dir'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\traitlets\config\application.py", line 1079, in launch_instance
+    app.initialize(argv)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\traitlets\config\application.py", line 117, in inner
+    return method(app, *args, **kwargs)
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\ipykernel\kernelapp.py", line 713, in initialize
+    super().initialize(argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\traitlets\config\application.py", line 117, in inner
+    return method(app, *args, **kwargs)
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\IPython\core\application.py", line 495, in initialize
+    self.init_profile_dir()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\IPython\core\application.py", line 399, in init_profile_dir
+    p = ProfileDir.find_profile_dir_by_name(self.ipython_dir, self.profile, self.config)
+                                            ^^^^^^^^^^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\traitlets\traitlets.py", line 705, in __get__
+    return self.get(obj, cls)  # type:ignore[return-value]
+           ~~~~~~~~^^^^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\traitlets\traitlets.py", line 655, in get
+    default = obj.trait_defaults(self.name)
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\traitlets\traitlets.py", line 1904, in trait_defaults
+    return self._get_trait_default_generator(names[0])(self)  # type:ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\traitlets\traitlets.py", line 1263, in __call__
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\IPython\core\application.py", line 213, in _ipython_dir_default
+    d = get_ipython_dir()
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\IPython\paths.py", line 71, in get_ipython_dir
+    os.makedirs(ipdir, exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 228, in makedirs
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\sh\\.ipython'
+Traceback (most recent call last):
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\execute_notebook.py", line 35, in <module>
+    if __name__=="__main__":main()
+                            ~~~~^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\scripts\execute_notebook.py", line 29, in main
+    client.execute(env=safe_env())
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "E:\Python313\Lib\asyncio\base_events.py", line 726, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\nbclient\client.py", line 693, in async_execute
+    async with self.async_setup_kernel(**kwargs):
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\Python313\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\nbclient\client.py", line 651, in async_setup_kernel
+    await self.async_start_new_kernel_client()
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\nbclient\client.py", line 566, in async_start_new_kernel_client
+    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
+                       ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\jupyter_core\utils\__init__.py", line 171, in wrapped
+    return _runner_map[name].run(inner)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\jupyter_core\utils\__init__.py", line 128, in run
+    return fut.result(None)
+           ~~~~~~~~~~^^^^^^
+  File "E:\Python313\Lib\concurrent\futures\_base.py", line 460, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "E:\Python313\Lib\concurrent\futures\_base.py", line 402, in __get_result
+    raise self._exception
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\jupyter_client\client.py", line 207, in _async_wait_for_ready
+    raise RuntimeError(msg)
+RuntimeError: Kernel died before replying to kernel_info
+Exception ignored in atexit callback <bound method run_sync.<locals>.wrapped of <nbclient.client.NotebookClient object at 0x00000297F1C2BCB0>>:
+Traceback (most recent call last):
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "E:\Python313\Lib\asyncio\base_events.py", line 726, in run_until_complete
+    return future.result()
+  File "C:\Users\sh\OneDrive\Documents\sprint1_gp\sprints-ai-orchestrator\sprints-ai-orchestrator\.venv-audit\Lib\site-packages\nbclient\client.py", line 504, in _async_cleanup_kernel
+    assert self.km is not None
+AssertionError: 

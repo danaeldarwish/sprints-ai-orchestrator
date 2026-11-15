@@ -1,0 +1,67 @@
+{
+  "image": "sha256:fc0ef3811e9d81b95a5912d21ada33d5fe432712724e8a33f9a7e32e0a5a0a2d",
+  "host_config": {
+    "NetworkMode": "none",
+    "ReadonlyRootfs": true,
+    "CapDrop": [
+      "ALL"
+    ],
+    "SecurityOpt": [
+      "no-new-privileges:true"
+    ],
+    "Memory": 536870912,
+    "MemorySwap": 536870912,
+    "NanoCpus": 500000000,
+    "PidsLimit": 32,
+    "Ulimits": [
+      {
+        "Name": "core",
+        "Hard": 0,
+        "Soft": 0
+      },
+      {
+        "Name": "cpu",
+        "Hard": 5,
+        "Soft": 5
+      },
+      {
+        "Name": "fsize",
+        "Hard": 1048576,
+        "Soft": 1048576
+      },
+      {
+        "Name": "nofile",
+        "Hard": 64,
+        "Soft": 64
+      }
+    ],
+    "Tmpfs": {
+      "/tmp": "rw,noexec,nosuid,nodev,size=16m,mode=1777"
+    },
+    "Init": true,
+    "Binds": null,
+    "Privileged": false,
+    "Devices": [],
+    "DeviceRequests": null,
+    "PidMode": ""
+  },
+  "user": "65534:65534",
+  "mounts": [],
+  "stdin_config": {
+    "OpenStdin": true,
+    "StdinOnce": true,
+    "AttachStdin": true
+  },
+  "requested_controls_verified": true,
+  "control_container_cleanup_exit": 0,
+  "effective_kernel_probe": {
+    "status": "ok",
+    "stdout": "Uid:\t65534\t65534\t65534\t65534\nGid:\t65534\t65534\t65534\t65534\nCapEff:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nmemory.max 536870912\nmemory.swap.max 0\npids.max 32\ncpu.max 50000 100000\n",
+    "stderr": "",
+    "exit_code": 0,
+    "duration_ms": 5291.8,
+    "violations": [],
+    "container_runtime_ms": 1196.305,
+    "transport_note": ""
+  }
+}
